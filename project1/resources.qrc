@@ -1,0 +1,84 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>img/bank1.png</file>
+        <file>img/map.png</file>
+        <file>img/3.png</file>
+        <file>img/4.png</file>
+        <file>img/5.png</file>
+        <file>img/2.png</file>
+        <file>img/44.png</file>
+        <file>img/55.png</file>
+        <file>img/s1.png</file>
+        <file>img/s1g1 .png</file>
+        <file>img/s2g2.png</file>
+        <file>img/g1s3 .png</file>
+        <file>img/g1s4.png</file>
+        <file>img/cardupd 1.png</file>
+        <file>img/g2s1.png</file>
+        <file>img/g2s2.png</file>
+        <file>img/g2s3.png</file>
+        <file>img/g2s4.png</file>
+        <file>img/g3s1 (1).png</file>
+        <file>img/g3s1 (2).png</file>
+        <file>img/g3s2 (1).png</file>
+        <file>img/g3s2 (2).png</file>
+        <file>img/g4s1 (1).png</file>
+        <file>img/g4s1 (2).png</file>
+        <file>img/g4s2 (1).png</file>
+        <file>img/g4s2 (2).png</file>
+        <file>img/g5s1 (1).png</file>
+        <file>img/g5s1 (2).png</file>
+        <file>img/g5s2 (1).png</file>
+        <file>img/g5s2 (2).png</file>
+        <file>img/g6s1 (1).png</file>
+        <file>img/g6s1 (2).png</file>
+        <file>img/g6s2 (1).png</file>
+        <file>img/g6s2 (2).png</file>
+        <file>img/cardupd 1 (1).png</file>
+        <file>img/firbal (1).png</file>
+        <file>img/firbal (2).png</file>
+        <file>img/Group 13.png</file>
+        <file>img/Group 10.png</file>
+        <file>img/Group 1 (1).png</file>
+        <file>img/Group 1.png</file>
+        <file>img/logpas (1).png</file>
+        <file>img/logpas (2).png</file>
+        <file>img/Group 11 (1).png</file>
+        <file>img/Group 11 (2).png</file>
+        <file>img/Group 11.png</file>
+        <file>img/Group 12.png</file>
+        <file>img/Group 13 (1).png</file>
+        <file>img/Group 14.png</file>
+        <file>img/Group 15.png</file>
+        <file>img/Group 16.png</file>
+        <file>img/pay12.png</file>
+        <file>img/Rectangle 1.png</file>
+        <file>img/credi (1).png</file>
+        <file>img/credi (2).png</file>
+        <file>img/credi (3).png</file>
+        <file>img/credi (4).png</file>
+        <file>img/crediti.png</file>
+        <file>img/Group 20.png</file>
+        <file>img/Group 19.png</file>
+        <file>img/curr (5).png</file>
+        <file>img/curr (6).png</file>
+        <file>img/curr (1).png</file>
+        <file>img/curr (2).png</file>
+        <file>img/curr (3).png</file>
+        <file>img/curr (4).png</file>
+        <file>img/mb (1).png</file>
+        <file>img/mb (3).png</file>
+        <file>img/mb (4).png</file>
+        <file>img/mb.png</file>
+        <file>img/Group 33 (1).png</file>
+        <file>img/Group 29.png</file>
+        <file>img/Group 33.png</file>
+        <file>img/sec (2).png</file>
+        <file>img/sec (3).png</file>
+        <file>img/sec (4).png</file>
+        <file>img/sec (5).png</file>
+        <file>img/sec (6).png</file>
+        <file>img/sec (1).png</file>
+        <file>img/Group 36.png</file>
+    </qresource>
+</RCC>
