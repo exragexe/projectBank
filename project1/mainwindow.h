@@ -12,7 +12,10 @@
 #include <QApplication>
 #include "registration.h"
 #include "sign.h"
+#include <QDebug>
 #include <QtSql/QSqlDatabase>
+#include <QSqlQuery>
+#include "sec.h"
 
 
 
@@ -38,8 +41,9 @@ private:
     Ui::MainWindow *ui;
     sign *window;
     registration *window2;
-
-
+    QSqlDatabase db;
+    QSqlQuery *query;
+    sec *secw;
 
 };
 #endif // MAINWINDOW_H

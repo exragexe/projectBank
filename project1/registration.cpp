@@ -12,6 +12,23 @@ registration::registration(QWidget *parent) :
     ui->login->setStyleSheet("background-color: #D9D9D9;");
     ui->pass->setStyleSheet("background-color: #D9D9D9;");
     setStyleSheet("background-color: transparent;");
+    //DATA BASE
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+    if (db.open()) {
+        qDebug() << "Database connected!";
+    } else {
+        qDebug() << "Failed to connect to database!";
+    }
+    QSqlQuery query("SELECT * FROM users");
+    query.exec("INSERT INTO Users(Id, Login, Password, Money, CreditStatus, SumCredit, Moneybox)");
+    if (query.exec()) {
+        qDebug() << "Table created";
+    } else {
+        qDebug() << "Table NOT created";
+    }
+
+
 }
 
 registration::~registration()
@@ -21,11 +38,25 @@ registration::~registration()
 
 void registration::on_pushButton_clicked()
 {
-    mainw= new MainWindow(this);
-    mainw->show();
-    this->hide();
-    mainw->setFixedSize(700, 800);
+    QString login = ui->login->text();
+    QString pass = ui->pass->text();
 
+    QSqlQuery query(db);
+    query.prepare("INSERT INTO Users(Login, Password, Money, CreditStatus, SumCredit, Moneybox) "
+                      "VALUES (:login, :pass, 0, 0, 0 , 0)");
+    query.bindValue(":login", login);
+    query.bindValue(":pass", pass);
+    if(query.exec()){
+        ui->login->clear();
+        ui->pass->clear();
+        mainw= new MainWindow(this);
+        mainw->show();
+        this->hide();
+        mainw->setFixedSize(700, 800);
+    }
+    else{
+        QMessageBox::critical(this, "Registration", "Error: Registration failed!");
+    }
 
 }
 

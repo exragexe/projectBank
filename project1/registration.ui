@@ -35,8 +35,8 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>276</x>
-     <y>535</y>
+     <x>225</x>
+     <y>534</y>
      <width>351</width>
      <height>30</height>
     </rect>
@@ -54,8 +54,8 @@
   <widget class="QLineEdit" name="pass">
    <property name="geometry">
     <rect>
-     <x>276</x>
-     <y>617</y>
+     <x>225</x>
+     <y>613</y>
      <width>351</width>
      <height>30</height>
     </rect>
@@ -117,40 +117,40 @@
   <widget class="QLabel" name="label_19">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>520</y>
-     <width>191</width>
-     <height>71</height>
+     <x>130</x>
+     <y>510</y>
+     <width>81</width>
+     <height>81</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="resources.qrc">:/resources/img/logpas (1).png</pixmap>
+    <pixmap resource="resources.qrc">:/resources/img/Group 43.png</pixmap>
    </property>
   </widget>
   <widget class="QLabel" name="label_20">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>600</y>
-     <width>191</width>
-     <height>71</height>
+     <x>130</x>
+     <y>590</y>
+     <width>81</width>
+     <height>81</height>
     </rect>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="resources.qrc">:/resources/img/logpas (2).png</pixmap>
+    <pixmap resource="resources.qrc">:/resources/img/Group 39 (1).png</pixmap>
    </property>
   </widget>
   <widget class="QLabel" name="label_21">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>522</y>
+     <x>211</x>
+     <y>521</y>
      <width>508</width>
      <height>65</height>
     </rect>
@@ -165,8 +165,8 @@
   <widget class="QLabel" name="label_22">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>567</y>
+     <x>211</x>
+     <y>563</y>
      <width>508</width>
      <height>136</height>
     </rect>

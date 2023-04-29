@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowTitle("DYAD Bank");
-    setStyleSheet("background-color: white;");
+    //setStyleSheet("background-color: white;");
 
 
     ui->label_3->setStyleSheet("background-color: transparent;");
@@ -24,7 +24,20 @@ MainWindow::MainWindow(QWidget *parent)
     //......
     setStyleSheet("background-color: transparent;");
     //DATABASE
-
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("data.db");
+    if (!db.open()) {
+        qDebug() << "Failed to open database connection";
+        return;
+    }
+    query = new QSqlQuery(db);
+    QString createTable = "CREATE TABLE Users(Id INT, Login TEXT, Password TEXT, Money INT,/"
+                          " CreditStatus BOOL, SumCredit INT, Moneybox INT)";
+    if (query->exec(createTable)) {
+        qDebug() << "Table created";
+    } else {
+        qDebug() << "Table NOT created";
+    }
 }
 
 MainWindow::~MainWindow()
@@ -33,28 +46,32 @@ MainWindow::~MainWindow()
 
 }
 
-
-
-
 void MainWindow::on_pushButton_2_clicked()
 {
-   QString login = ui->login->text();
-   QString pass = ui->pass->text();
-   if(login =="1" && pass =="1"){
-       hide();
-       window = new sign(this);
-       window->setFixedSize(700, 800);
-       window->show();
+    QString login = ui->login->text();
+    QString pass = ui->pass->text();
 
-    }
-    else{
+    QSqlQuery query(db);
+    query.prepare("SELECT * FROM Users WHERE Login = :login AND Password = :pass");
+    query.bindValue(":login", login);
+    query.bindValue(":pass", pass);
 
-       QMessageBox messageBox;
-               messageBox.setStyleSheet("color:red;background:blue");
+    if (query.exec() && query.next() && !login.isEmpty() && !pass.isEmpty()) {
+        globalLogin = query.value(1).toString();
+        globalPassword = query.value(2).toString();
+        //secw = new sec(login,this);
+        hide();
+        window = new sign(this);
+        window->setFixedSize(700, 800);
+        window->show();
+    } else{
 
-               messageBox.critical(this, "Ошибка", "Неправильный логин или пароль!");
+        QMessageBox messageBox;
 
-    }
+        messageBox.critical(this, "Error", "Not correct login or password!");
+
+     }
+
 }
 
 

@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include <QMainWindow>
+#include <QtSql/QSqlDatabase>
+#include <QSqlQuery>
 
 namespace Ui {
 class registration;
@@ -22,6 +24,8 @@ private slots:
 private:
     Ui::registration *ui;
     QMainWindow *mainw;
+    QSqlDatabase db;
+    QSqlQuery *query;
 
 
 };

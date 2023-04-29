@@ -131,8 +131,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>530</y>
+      <x>215</x>
+      <y>525</y>
       <width>351</width>
       <height>41</height>
      </rect>
@@ -150,10 +150,10 @@
    <widget class="QLineEdit" name="pass">
     <property name="geometry">
      <rect>
-      <x>275</x>
-      <y>615</y>
+      <x>215</x>
+      <y>605</y>
       <width>351</width>
-      <height>30</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -169,10 +169,10 @@
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>520</y>
-      <width>191</width>
-      <height>72</height>
+      <x>118</x>
+      <y>510</y>
+      <width>81</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -182,16 +182,16 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="resources.qrc">:/resources/img/logpas (1).png</pixmap>
+     <pixmap resource="resources.qrc">:/resources/img/Group 43.png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_5">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>600</y>
-      <width>191</width>
-      <height>72</height>
+      <x>118</x>
+      <y>590</y>
+      <width>81</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -201,14 +201,14 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap resource="resources.qrc">:/resources/img/logpas (2).png</pixmap>
+     <pixmap resource="resources.qrc">:/resources/img/Group 39 (1).png</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>520</y>
+      <x>200</x>
+      <y>514</y>
       <width>573</width>
       <height>72</height>
      </rect>
@@ -223,8 +223,8 @@
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>560</y>
+      <x>200</x>
+      <y>555</y>
       <width>573</width>
       <height>150</height>
      </rect>

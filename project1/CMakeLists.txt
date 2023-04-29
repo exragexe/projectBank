@@ -44,10 +44,6 @@ set(PROJECT_SOURCES
         sec.cpp
         sec.h
         sec.ui
-        database.cpp
-        database.h
-        database.ui
-
 
         resources.qrc
 )
@@ -74,8 +70,10 @@ else()
         )
     endif()
 endif()
+find_package(Qt6 COMPONENTS Sql REQUIRED)
+target_link_libraries(project1 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt6::Sql)
 
-target_link_libraries(project1 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+
 
 set_target_properties(project1 PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
