@@ -5,6 +5,12 @@
 #include <QMainWindow>
 #include <QtSql/QSqlDatabase>
 #include <QSqlQuery>
+#include <QStyle>
+#include <QDateTime>
+#include <QChar>
+extern QString globalLogin;
+extern QString globalPassword;
+extern qint64 globalId;
 
 namespace Ui {
 class registration;
@@ -20,6 +26,10 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_pushButton_2_clicked();
+
+
 
 private:
     Ui::registration *ui;

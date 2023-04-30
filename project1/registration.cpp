@@ -6,6 +6,7 @@ registration::registration(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::registration)
 {
+
     ui->setupUi(this);
     setWindowTitle("DYAD Bank");
 
@@ -40,23 +41,48 @@ void registration::on_pushButton_clicked()
 {
     QString login = ui->login->text();
     QString pass = ui->pass->text();
-
-    QSqlQuery query(db);
-    query.prepare("INSERT INTO Users(Login, Password, Money, CreditStatus, SumCredit, Moneybox) "
-                      "VALUES (:login, :pass, 0, 0, 0 , 0)");
-    query.bindValue(":login", login);
-    query.bindValue(":pass", pass);
-    if(query.exec()){
-        ui->login->clear();
-        ui->pass->clear();
-        mainw= new MainWindow(this);
-        mainw->show();
-        this->hide();
-        mainw->setFixedSize(700, 800);
+    QSqlQuery checkQuery(db);
+    checkQuery.prepare("SELECT COUNT(*) FROM Users WHERE Login = :login");
+    checkQuery.bindValue(":login", login);
+    if (checkQuery.exec() && checkQuery.first() && checkQuery.value(0).toInt() > 0) {
+        qApp->setPalette(QApplication::style()->standardPalette());
+        QMessageBox::critical(this, "Registration", "Error: Login already exists!");
     }
     else{
-        QMessageBox::critical(this, "Registration", "Error: Registration failed!");
+        checkQuery.prepare("SELECT MAX(Id) FROM Users");
+        if (checkQuery.exec() && checkQuery.first()) {
+            globalId = checkQuery.value(0).toInt() + 1;
+        } else {
+
+        }
+        QSqlQuery query(db);
+        query.prepare("INSERT INTO Users(Id, Login, Password, Money, CreditStatus, SumCredit, Moneybox) "
+                          "VALUES (:id, :login, :pass, 0, 0, 0 , 0)");
+        query.bindValue(":id", globalId);
+        query.bindValue(":login", login);
+        query.bindValue(":pass", pass);
+        if(query.exec()){
+            ui->login->clear();
+            ui->pass->clear();
+            mainw= new MainWindow(this);
+            mainw->show();
+            this->hide();
+            mainw->setFixedSize(700, 800);
+        }
+        else{
+            qApp->setPalette(QApplication::style()->standardPalette());
+            QMessageBox::critical(this, "Registration", "Error: Registration failed!");
+        }
     }
 
+}
+
+
+void registration::on_pushButton_2_clicked()
+{
+    mainw= new MainWindow(this);
+    mainw->show();
+    this->hide();
+    mainw->setFixedSize(700, 800);
 }
 

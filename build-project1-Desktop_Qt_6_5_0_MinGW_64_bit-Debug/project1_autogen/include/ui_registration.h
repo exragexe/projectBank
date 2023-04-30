@@ -31,6 +31,7 @@ public:
     QLabel *label_21;
     QLabel *label_22;
     QLabel *label_3;
+    QPushButton *pushButton_2;
 
     void setupUi(QDialog *registration)
     {
@@ -57,7 +58,7 @@ public:
         pass->setFrame(false);
         pushButton = new QPushButton(registration);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(250, 680, 201, 71));
+        pushButton->setGeometry(QRect(290, 680, 201, 71));
         QFont font1;
         font1.setFamilies({QString::fromUtf8("Lucida Console")});
         font1.setPointSize(20);
@@ -96,6 +97,17 @@ public:
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(180, 100, 351, 341));
         label_3->setPixmap(QPixmap(QString::fromUtf8(":/resources/img/bank1.png")));
+        pushButton_2 = new QPushButton(registration);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setGeometry(QRect(210, 680, 71, 71));
+        pushButton_2->setFont(font1);
+        pushButton_2->setStyleSheet(QString::fromUtf8("border-image: url(:/resources/img/Group 45.png);"));
+        pushButton_2->setIcon(icon);
+        pushButton_2->setCheckable(false);
+        pushButton_2->setAutoRepeat(false);
+        pushButton_2->setAutoExclusive(false);
+        pushButton_2->setAutoDefault(false);
+        pushButton_2->setFlat(false);
         label->raise();
         pushButton->raise();
         label_19->raise();
@@ -105,10 +117,12 @@ public:
         login->raise();
         pass->raise();
         label_3->raise();
+        pushButton_2->raise();
 
         retranslateUi(registration);
 
         pushButton->setDefault(false);
+        pushButton_2->setDefault(false);
 
 
         QMetaObject::connectSlotsByName(registration);
@@ -124,6 +138,7 @@ public:
         label_21->setText(QString());
         label_22->setText(QString());
         label_3->setText(QString());
+        pushButton_2->setText(QString());
     } // retranslateUi
 
 };

@@ -59,8 +59,8 @@ void MainWindow::on_pushButton_2_clicked()
     if (query.exec() && query.next() && !login.isEmpty() && !pass.isEmpty()) {
         globalLogin = query.value(1).toString();
         globalPassword = query.value(2).toString();
-        //secw = new sec(login,this);
         hide();
+        qDebug() << globalId;
         window = new sign(this);
         window->setFixedSize(700, 800);
         window->show();

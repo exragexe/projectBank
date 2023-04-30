@@ -1,4 +1,6 @@
 project1_autogen/timestamp: \
+  D:/qt/6.5.0/mingw_64/include/QtCore/QChar \
+  D:/qt/6.5.0/mingw_64/include/QtCore/QDateTime \
   D:/qt/6.5.0/mingw_64/include/QtCore/QDebug \
   D:/qt/6.5.0/mingw_64/include/QtCore/QString \
   D:/qt/6.5.0/mingw_64/include/QtCore/q20memory.h \
@@ -17,6 +19,7 @@ project1_autogen/timestamp: \
   D:/qt/6.5.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qbytearraylist.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qbytearrayview.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qcalendar.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qchar.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qcompare.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qcompare_impl.h \
@@ -32,6 +35,7 @@ project1_autogen/timestamp: \
   D:/qt/6.5.0/mingw_64/include/QtCore/qcoreevent.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qdatastream.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qdatetime.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qdebug.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qeventloop.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -168,6 +172,7 @@ project1_autogen/timestamp: \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QMainWindow \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QMessageBox \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QPushButton \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/QStyle \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractbutton.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qapplication.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qboxlayout.h \
@@ -184,6 +189,7 @@ project1_autogen/timestamp: \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qmessagebox.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qpushbutton.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qsizepolicy.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qstyle.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qtabwidget.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \

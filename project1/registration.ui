@@ -73,7 +73,7 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>290</x>
      <y>680</y>
      <width>201</width>
      <height>71</height>
@@ -194,6 +194,50 @@
     <pixmap resource="resources.qrc">:/resources/img/bank1.png</pixmap>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>680</y>
+     <width>71</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Lucida Console</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/resources/img/Group 45.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset theme="accessories-text-editor">
+     <normaloff>.</normaloff>.</iconset>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoRepeat">
+    <bool>false</bool>
+   </property>
+   <property name="autoExclusive">
+    <bool>false</bool>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>pushButton</zorder>
   <zorder>label_19</zorder>
@@ -203,6 +247,7 @@
   <zorder>login</zorder>
   <zorder>pass</zorder>
   <zorder>label_3</zorder>
+  <zorder>pushButton_2</zorder>
  </widget>
  <resources>
   <include location="resources.qrc"/>

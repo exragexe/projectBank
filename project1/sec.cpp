@@ -84,3 +84,36 @@ void sec::on_pushButton_3_clicked()
         QMessageBox::critical(this, "Error", "Failed to retrieve password from database!");
 }
 }
+
+void sec::on_pushButton_2_clicked()
+{
+
+    QString oldpas = ui->lineEdit_2->text();
+    QString newpas = ui->lineEdit_3->text();
+
+    QSqlQuery checkQuery(db);
+    checkQuery.prepare("SELECT Password FROM Users WHERE Id = :id");
+
+    checkQuery.bindValue(":id", globalId);
+    if (checkQuery.exec() && checkQuery.first()) {
+        QString passwordFromDb = checkQuery.value(0).toString();
+        if (passwordFromDb == oldpas) {
+            QSqlQuery updateQuery(db);
+            updateQuery.prepare("UPDATE Users SET Password = :pass WHERE Id = :id");
+            updateQuery.bindValue(":pass", newpas);
+            updateQuery.bindValue(":id", globalId);
+            if (updateQuery.exec()) {
+                QMessageBox::information(this, "Change Password", "Password updated successfully!");
+            } else {
+                QMessageBox::critical(this, "Change Password", "Error: Password update failed!");
+            }
+        } else {
+            QMessageBox::critical(this, "Change Password", "Error: Incorrect old password!");
+        }
+    } else {
+        QMessageBox::critical(this, "Change Password", "Error: Failed to get password from database!");
+    }
+
+
+}
+
