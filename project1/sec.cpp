@@ -92,17 +92,19 @@ void sec::on_pushButton_2_clicked()
     QString newpas = ui->lineEdit_3->text();
 
     QSqlQuery checkQuery(db);
-    checkQuery.prepare("SELECT Password FROM Users WHERE Id = :id");
+    checkQuery.prepare("SELECT Password FROM Users WHERE Login = :login");
 
-    checkQuery.bindValue(":id", globalId);
+    checkQuery.bindValue(":login", globalLogin);
     if (checkQuery.exec() && checkQuery.first()) {
         QString passwordFromDb = checkQuery.value(0).toString();
         if (passwordFromDb == oldpas) {
             QSqlQuery updateQuery(db);
-            updateQuery.prepare("UPDATE Users SET Password = :pass WHERE Id = :id");
+            updateQuery.prepare("UPDATE Users SET Password = :pass WHERE Login = :login");
             updateQuery.bindValue(":pass", newpas);
-            updateQuery.bindValue(":id", globalId);
+            updateQuery.bindValue(":login", globalLogin);
             if (updateQuery.exec()) {
+                ui->lineEdit_2->clear();
+                 ui->lineEdit_3->clear();
                 QMessageBox::information(this, "Change Password", "Password updated successfully!");
             } else {
                 QMessageBox::critical(this, "Change Password", "Error: Password update failed!");
@@ -116,4 +118,3 @@ void sec::on_pushButton_2_clicked()
 
 
 }
-

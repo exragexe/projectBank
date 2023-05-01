@@ -49,16 +49,11 @@ void registration::on_pushButton_clicked()
         QMessageBox::critical(this, "Registration", "Error: Login already exists!");
     }
     else{
-        checkQuery.prepare("SELECT MAX(Id) FROM Users");
-        if (checkQuery.exec() && checkQuery.first()) {
-            globalId = checkQuery.value(0).toInt() + 1;
-        } else {
 
-        }
         QSqlQuery query(db);
         query.prepare("INSERT INTO Users(Id, Login, Password, Money, CreditStatus, SumCredit, Moneybox) "
-                          "VALUES (:id, :login, :pass, 0, 0, 0 , 0)");
-        query.bindValue(":id", globalId);
+                          "VALUES (:id+1, :login, :pass, 0, 0, 0 , 0)");
+
         query.bindValue(":login", login);
         query.bindValue(":pass", pass);
         if(query.exec()){
@@ -85,4 +80,3 @@ void registration::on_pushButton_2_clicked()
     this->hide();
     mainw->setFixedSize(700, 800);
 }
-
