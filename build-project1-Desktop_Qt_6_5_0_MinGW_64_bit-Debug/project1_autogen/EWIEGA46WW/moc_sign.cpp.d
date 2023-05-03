@@ -3,6 +3,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/QString \
   D:/qt/6.5.0/mingw_64/include/QtCore/q20memory.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/q20type_traits.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qabstractitemmodel.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qalgorithms.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qanystringview.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qarraydata.h \
@@ -41,10 +42,12 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/qhash.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qhashfunctions.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qiodevicebase.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qitemselectionmodel.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qiterable.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qiterator.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qline.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qlist.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qlocale.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qlogging.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qmalloc.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qmap.h \
@@ -65,6 +68,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/qprocessordetection.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qrect.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qrefcount.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qregularexpression.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qscopedpointer.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qscopeguard.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qset.h \
@@ -109,6 +113,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/qvarlengtharray.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qversiontagging.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qxptype_traits.h \
+  D:/qt/6.5.0/mingw_64/include/QtGui/QStandardItemModel \
   D:/qt/6.5.0/mingw_64/include/QtGui/qaction.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qbitmap.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qbrush.h \
@@ -129,6 +134,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtGui/qregion.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qrgb.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qrgba64.h \
+  D:/qt/6.5.0/mingw_64/include/QtGui/qstandarditemmodel.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qtextcursor.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qtextdocument.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qtextformat.h \
@@ -137,6 +143,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtGui/qtguiexports.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qtguiglobal.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qtransform.h \
+  D:/qt/6.5.0/mingw_64/include/QtGui/qvalidator.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qwindowdefs.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/QSqlDatabase \
@@ -148,15 +155,27 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtSql/qtsqlglobal.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QDialog \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QInputDialog \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/QListView \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QMainWindow \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QMessageBox \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractslider.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qdialog.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qframe.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qinputdialog.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qlineedit.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qlistview.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qmainwindow.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qmessagebox.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qrubberband.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qsizepolicy.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qslider.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qstyle.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qstyleoption.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qtabbar.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qtabwidget.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qtwidgetsexports.h \

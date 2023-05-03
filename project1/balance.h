@@ -2,7 +2,12 @@
 #define BALANCE_H
 
 #include <QDialog>
-
+#include <QtSql/QSqlDatabase>
+#include <QSqlQuery>
+#include <QString>
+#include <QMessageBox>
+#include <QListView>
+#include <QStandardItemModel>
 
 
 
@@ -27,6 +32,8 @@ private slots:
 private:
     Ui::balance *ui;
     QDialog *sign;
+    QSqlDatabase db;
+    QSqlQuery *query;
 
 };
 

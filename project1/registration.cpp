@@ -22,7 +22,7 @@ registration::registration(QWidget *parent) :
         qDebug() << "Failed to connect to database!";
     }
     QSqlQuery query("SELECT * FROM users");
-    query.exec("INSERT INTO Users(Id, Login, Password, Money, CreditStatus, SumCredit, Moneybox)");
+    query.exec("INSERT INTO Users(Login, Password, Money, CreditStatus, SumCredit, Moneybox)");
     if (query.exec()) {
         qDebug() << "Table created";
     } else {

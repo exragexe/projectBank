@@ -31,8 +31,8 @@ MainWindow::MainWindow(QWidget *parent)
         return;
     }
     query = new QSqlQuery(db);
-    QString createTable = "CREATE TABLE Users(Id INT, Login TEXT, Password TEXT, Money INT,/"
-                          " CreditStatus BOOL, SumCredit INT, Moneybox INT)";
+    QString createTable = "CREATE TABLE Users(Login TEXT, Password TEXT, Money INT,/"
+                          " CreditStatus BOOL, SumCredit INT, Moneybox INT, HistorySender TEXT, HistoryPrice INT)";
     if (query->exec(createTable)) {
         qDebug() << "Table created";
     } else {

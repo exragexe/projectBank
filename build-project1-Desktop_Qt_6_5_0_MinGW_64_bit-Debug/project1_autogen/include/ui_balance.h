@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QListView>
 #include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
@@ -25,6 +26,8 @@ public:
     QLabel *label_3;
     QLabel *label_4;
     QPushButton *pushButton;
+    QLabel *label_5;
+    QListView *listView;
 
     void setupUi(QDialog *balance)
     {
@@ -51,6 +54,26 @@ public:
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(580, 10, 101, 91));
         pushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/resources/img/Group 10.png);"));
+        label_5 = new QLabel(balance);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(310, 520, 221, 61));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Corbel")});
+        font.setPointSize(22);
+        label_5->setFont(font);
+        listView = new QListView(balance);
+        listView->setObjectName("listView");
+        listView->setGeometry(QRect(290, 630, 256, 221));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Corbel")});
+        font1.setPointSize(24);
+        listView->setFont(font1);
+        listView->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
+        listView->setFrameShadow(QFrame::Raised);
+        listView->setLineWidth(1);
+        listView->setAutoScroll(true);
+        listView->setTabKeyNavigation(false);
+        listView->setAlternatingRowColors(false);
 
         retranslateUi(balance);
 
@@ -65,6 +88,7 @@ public:
         label_3->setText(QString());
         label_4->setText(QString());
         pushButton->setText(QString());
+        label_5->setText(QString());
     } // retranslateUi
 
 };
