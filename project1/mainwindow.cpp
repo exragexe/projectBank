@@ -26,18 +26,22 @@ MainWindow::MainWindow(QWidget *parent)
     //DATABASE
     db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("data.db");
+
     if (!db.open()) {
-        qDebug() << "Failed to open database connection";
+        qDebug() << "Failed to open database connection: " << db.lastError().text();
         return;
     }
+
     query = new QSqlQuery(db);
-    QString createTable = "CREATE TABLE Users(Login TEXT, Password TEXT, Money INT,/"
-                          " CreditStatus BOOL, SumCredit INT, Moneybox INT, HistorySender TEXT, HistoryPrice INT)";
+    QString createTable = "CREATE TABLE IF NOT EXISTS Users(IDCARD TEXT, Login TEXT, Password TEXT, Money INT, CreditStatus BOOL, SumCredit INT, Moneybox INT, HistorySender TEXT, HistoryPrice TEXT);";
+
     if (query->exec(createTable)) {
         qDebug() << "Table created";
     } else {
-        qDebug() << "Table NOT created";
+        qDebug() << "Table NOT created: " << query->lastError().text();
     }
+
+
 }
 
 MainWindow::~MainWindow()
@@ -51,28 +55,39 @@ void MainWindow::on_pushButton_2_clicked()
     QString login = ui->login->text();
     QString pass = ui->pass->text();
 
-    QSqlQuery query(db);
-    query.prepare("SELECT * FROM Users WHERE Login = :login AND Password = :pass");
-    query.bindValue(":login", login);
-    query.bindValue(":pass", pass);
+    if (db.open()) {
+        QSqlQuery query;
+        query.prepare("SELECT * FROM Users WHERE Login = :login AND Password = :pass");
+        query.bindValue(":login", login);
+        query.bindValue(":pass", pass);
 
-    if (query.exec() && query.next() && !login.isEmpty() && !pass.isEmpty()) {
-        globalLogin = query.value(1).toString();
-        globalPassword = query.value(2).toString();
-        hide();
+        if (query.exec() && query.next() && !login.isEmpty() && !pass.isEmpty()) {
+            globalLogin = query.value(1).toString();
+            globalPassword = query.value(2).toString();
+            hide();
 
-        window = new sign(this);
-        window->setFixedSize(700, 800);
-        window->show();
-    } else{
+            window = new sign(this);
+            window->setFixedSize(700, 800);
+            window->show();
 
-        QMessageBox messageBox;
+            db.close();
+        } else{
+            QMessageBox* msgBox = new QMessageBox(this);
+            msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+            msgBox->setText("Error: Not correct login or password!");
+            msgBox->setWindowTitle("Login failed");
+            msgBox->setIcon(QMessageBox::Critical);
+            QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+            okButton->setFixedSize(80,30);
+            okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+            QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
 
-        messageBox.critical(this, "Error", "Not correct login or password!");
-
-     }
-
+        }
+    } else {
+        qDebug() << "Failed to open database connection";
+    }
 }
+
 
 
 void MainWindow::on_pushButton_clicked()

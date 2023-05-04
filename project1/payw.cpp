@@ -13,10 +13,10 @@ payw::payw(QDialog *sign,QWidget *parent) :
     setStyleSheet("background-color: transparent;");
     ui->sum->setStyleSheet("background-color: #2E2E2E;");
     ui->payee->setStyleSheet("background-color: #2E2E2E;");
-    ui->card->setStyleSheet("background-color: #2E2E2E;");
+    //ui->card->setStyleSheet("background-color: #2E2E2E;");
 
     //CARD
-
+    ui->listWidget->addItem("Briliant card");
 }
 
 payw::~payw()

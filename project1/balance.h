@@ -8,6 +8,7 @@
 #include <QMessageBox>
 #include <QListView>
 #include <QStandardItemModel>
+#include <QSqlQueryModel>
 
 
 

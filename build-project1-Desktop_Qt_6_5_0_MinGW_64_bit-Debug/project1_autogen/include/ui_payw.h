@@ -14,6 +14,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
@@ -25,13 +26,13 @@ public:
     QLabel *label_3;
     QLineEdit *payee;
     QLineEdit *sum;
-    QLineEdit *card;
     QLabel *label_2;
     QLabel *label_4;
     QLabel *label_5;
     QLabel *label;
     QPushButton *pushButton_2;
     QPushButton *exi;
+    QListWidget *listWidget;
 
     void setupUi(QDialog *payw)
     {
@@ -59,11 +60,6 @@ public:
         sum->setGeometry(QRect(240, 510, 391, 41));
         sum->setFont(font);
         sum->setFrame(false);
-        card = new QLineEdit(payw);
-        card->setObjectName("card");
-        card->setGeometry(QRect(240, 310, 391, 41));
-        card->setFont(font);
-        card->setFrame(false);
         label_2 = new QLabel(payw);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(115, 23, 455, 251));
@@ -88,10 +84,14 @@ public:
         exi->setObjectName("exi");
         exi->setGeometry(QRect(600, 10, 97, 89));
         exi->setStyleSheet(QString::fromUtf8("border-image: url(:/resources/img/Group 10.png);"));
+        listWidget = new QListWidget(payw);
+        listWidget->setObjectName("listWidget");
+        listWidget->setGeometry(QRect(240, 310, 401, 41));
+        listWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(46, 46, 46);"));
+        listWidget->setFrameShadow(QFrame::Raised);
         label->raise();
         pushButton_2->raise();
         label_3->raise();
-        card->raise();
         label_2->raise();
         label_4->raise();
         label_6->raise();
@@ -99,6 +99,7 @@ public:
         payee->raise();
         sum->raise();
         exi->raise();
+        listWidget->raise();
 
         retranslateUi(payw);
 
@@ -115,7 +116,6 @@ public:
         label_3->setText(QString());
         payee->setText(QString());
         sum->setText(QString());
-        card->setText(QString());
         label_2->setText(QString());
         label_4->setText(QString());
         label_5->setText(QString());

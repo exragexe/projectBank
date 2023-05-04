@@ -74,14 +74,41 @@ void sec::on_pushButton_3_clicked()
 }
     else {
         qDebug() << "Failed to delete user " << currentUserLogin;
-        QMessageBox::critical(this, "Security", "Error: Delete account failed!");
+        QMessageBox* msgBox = new QMessageBox(this);
+        msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+        msgBox->setText("Error: Delete account failed!");
+        msgBox->setWindowTitle("Security");
+        msgBox->setIcon(QMessageBox::Critical);
+        QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+        okButton->setFixedSize(80,30);
+        okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+        QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+
 }
 }   else {
-        QMessageBox::critical(this, "Error", "Incorrect password!");
+        QMessageBox* msgBox = new QMessageBox(this);
+        msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+        msgBox->setText("Error: Incorrect password!");
+        msgBox->setWindowTitle("Security");
+        msgBox->setIcon(QMessageBox::Critical);
+        QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+        okButton->setFixedSize(80,30);
+        okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+        QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+
     }
 }
 }   else {
-        QMessageBox::critical(this, "Error", "Failed to retrieve password from database!");
+        QMessageBox* msgBox = new QMessageBox(this);
+        msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+        msgBox->setText("Error: Failed to retrieve password from database!");
+        msgBox->setWindowTitle("Security");
+        msgBox->setIcon(QMessageBox::Critical);
+        QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+        okButton->setFixedSize(80,30);
+        okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+        QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+
 }
 }
 
@@ -105,15 +132,51 @@ void sec::on_pushButton_2_clicked()
             if (updateQuery.exec()) {
                 ui->lineEdit_2->clear();
                  ui->lineEdit_3->clear();
-                QMessageBox::information(this, "Change Password", "Password updated successfully!");
+                 QMessageBox* msgBox = new QMessageBox(this);
+                 msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+                 msgBox->setText("Password updated successfully!");
+                 msgBox->setWindowTitle("Security");
+                 msgBox->setIcon(QMessageBox::Information);
+                 QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+                 okButton->setFixedSize(80,30);
+                 okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+                 QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+
             } else {
-                QMessageBox::critical(this, "Change Password", "Error: Password update failed!");
+                QMessageBox* msgBox = new QMessageBox(this);
+                msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+                msgBox->setText("Error: Password update failed!");
+                msgBox->setWindowTitle("Security");
+                msgBox->setIcon(QMessageBox::Critical);
+                QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+                okButton->setFixedSize(80,30);
+                okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+                QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+
             }
         } else {
-            QMessageBox::critical(this, "Change Password", "Error: Incorrect old password!");
+            QMessageBox* msgBox = new QMessageBox(this);
+            msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+            msgBox->setText("Error: Incorrect old password!");
+            msgBox->setWindowTitle("Security");
+            msgBox->setIcon(QMessageBox::Critical);
+            QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+            okButton->setFixedSize(80,30);
+            okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+            QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+
         }
     } else {
-        QMessageBox::critical(this, "Change Password", "Error: Failed to get password from database!");
+        QMessageBox* msgBox = new QMessageBox(this);
+        msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+        msgBox->setText("Error: Failed to get password from database!");
+        msgBox->setWindowTitle("Security");
+        msgBox->setIcon(QMessageBox::Critical);
+        QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+        okButton->setFixedSize(80,30);
+        okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+        QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+
     }
 
 

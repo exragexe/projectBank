@@ -142,8 +142,10 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/QSqlDatabase \
   D:/qt/6.5.0/mingw_64/include/QtSql/QSqlQuery \
+  D:/qt/6.5.0/mingw_64/include/QtSql/QSqlQueryModel \
   D:/qt/6.5.0/mingw_64/include/QtSql/qsqldatabase.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qsqlquery.h \
+  D:/qt/6.5.0/mingw_64/include/QtSql/qsqlquerymodel.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qtsql-config.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qtsqlexports.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qtsqlglobal.h \

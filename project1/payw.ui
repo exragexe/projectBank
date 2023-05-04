@@ -89,28 +89,6 @@
     <bool>false</bool>
    </property>
   </widget>
-  <widget class="QLineEdit" name="card">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>310</y>
-     <width>391</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Corbel</family>
-     <pointsize>28</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="frame">
-    <bool>false</bool>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
@@ -210,10 +188,25 @@
     <bool>false</bool>
    </property>
   </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>310</y>
+     <width>401</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(46, 46, 46);</string>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
   <zorder>label</zorder>
   <zorder>pushButton_2</zorder>
   <zorder>label_3</zorder>
-  <zorder>card</zorder>
   <zorder>label_2</zorder>
   <zorder>label_4</zorder>
   <zorder>label_6</zorder>
@@ -221,6 +214,7 @@
   <zorder>payee</zorder>
   <zorder>sum</zorder>
   <zorder>exi</zorder>
+  <zorder>listWidget</zorder>
  </widget>
  <resources>
   <include location="resources.qrc"/>

@@ -8,6 +8,8 @@
 #include <QStyle>
 #include <QDateTime>
 #include <QChar>
+#include <QPushButton>
+#include <QSqlError>
 extern QString globalLogin;
 extern QString globalPassword;
 extern qint64 globalId;
