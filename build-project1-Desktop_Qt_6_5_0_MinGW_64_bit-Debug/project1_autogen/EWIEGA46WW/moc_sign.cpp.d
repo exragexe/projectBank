@@ -1,5 +1,8 @@
 D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autogen/EWIEGA46WW/moc_sign.cpp: D:/qt/projects/project1/sign.h \
   D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autogen/moc_predefs.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/QChar \
+  D:/qt/6.5.0/mingw_64/include/QtCore/QDateTime \
+  D:/qt/6.5.0/mingw_64/include/QtCore/QDebug \
   D:/qt/6.5.0/mingw_64/include/QtCore/QString \
   D:/qt/6.5.0/mingw_64/include/QtCore/q20memory.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/q20type_traits.h \
@@ -18,6 +21,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qbytearraylist.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qbytearrayview.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qcalendar.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qchar.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qcompare.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qcompare_impl.h \
@@ -28,9 +32,14 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/qcontainerinfo.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qcontainertools_impl.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qcontiguouscache.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qcoreapplication.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qcoreevent.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qdatastream.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qdatetime.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qdebug.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qeventloop.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qexceptionhandling.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qflags.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qfloat16.h \
@@ -41,6 +50,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/qglobalstatic.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qhash.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qhashfunctions.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qiodevice.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qiodevicebase.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qitemselectionmodel.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qiterable.h \
@@ -57,6 +67,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/qmetatype.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qminmax.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qnamespace.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qnativeinterface.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qnumeric.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qobject.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qobject_impl.h \
@@ -113,6 +124,8 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/qvarlengtharray.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qversiontagging.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qxptype_traits.h \
+  D:/qt/6.5.0/mingw_64/include/QtGui/QFont \
+  D:/qt/6.5.0/mingw_64/include/QtGui/QPixmap \
   D:/qt/6.5.0/mingw_64/include/QtGui/QStandardItemModel \
   D:/qt/6.5.0/mingw_64/include/QtGui/qaction.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qbitmap.h \
@@ -122,12 +135,16 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtGui/qfont.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qfontinfo.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qfontmetrics.h \
+  D:/qt/6.5.0/mingw_64/include/QtGui/qguiapplication.h \
+  D:/qt/6.5.0/mingw_64/include/QtGui/qguiapplication_platform.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qicon.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qimage.h \
+  D:/qt/6.5.0/mingw_64/include/QtGui/qinputmethod.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qkeysequence.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qpaintdevice.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qpalette.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qpen.h \
+  D:/qt/6.5.0/mingw_64/include/QtGui/qpicture.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qpixelformat.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qpixmap.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qpolygon.h \
@@ -147,33 +164,50 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtGui/qwindowdefs.h \
   D:/qt/6.5.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/QSqlDatabase \
+  D:/qt/6.5.0/mingw_64/include/QtSql/QSqlError \
   D:/qt/6.5.0/mingw_64/include/QtSql/QSqlQuery \
   D:/qt/6.5.0/mingw_64/include/QtSql/QSqlQueryModel \
   D:/qt/6.5.0/mingw_64/include/QtSql/qsqldatabase.h \
+  D:/qt/6.5.0/mingw_64/include/QtSql/qsqlerror.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qsqlquery.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qsqlquerymodel.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qtsql-config.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qtsqlexports.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qtsqlglobal.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/QApplication \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QDialog \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/QFormLayout \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QInputDialog \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/QLabel \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/QLayout \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QListView \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QListWidget \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QMainWindow \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QMessageBox \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/QPushButton \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/QStyle \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractbutton.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractitemview.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractslider.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qapplication.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qboxlayout.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qdialog.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qformlayout.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qframe.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qgridlayout.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qinputdialog.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qlabel.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qlayout.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qlayoutitem.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qlineedit.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qlistview.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qlistwidget.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qmainwindow.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qmessagebox.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/qpushbutton.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qrubberband.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/qslider.h \
@@ -404,6 +438,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/projects/project1/bills.h \
   D:/qt/projects/project1/credit.h \
   D:/qt/projects/project1/curr.h \
+  D:/qt/projects/project1/library.h \
   D:/qt/projects/project1/mbox.h \
   D:/qt/projects/project1/payw.h \
   D:/qt/projects/project1/sec.h

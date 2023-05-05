@@ -87,7 +87,7 @@ public:
 ""));
         label_7 = new QLabel(balance);
         label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(34, 338, 151, 51));
+        label_7->setGeometry(QRect(34, 343, 151, 51));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("Bahnschrift Condensed")});
         font3.setPointSize(18);

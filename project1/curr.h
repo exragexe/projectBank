@@ -1,7 +1,8 @@
 #ifndef CURR_H
 #define CURR_H
 
-#include <QDialog>
+
+#include "library.h"
 
 namespace Ui {
 class curr;

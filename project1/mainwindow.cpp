@@ -33,7 +33,7 @@ MainWindow::MainWindow(QWidget *parent)
     }
 
     query = new QSqlQuery(db);
-    QString createTable = "CREATE TABLE IF NOT EXISTS Users(IDCARD TEXT, Login TEXT, Password TEXT, Money INT, CreditStatus BOOL, SumCredit INT, Moneybox INT, HistorySender TEXT, HistoryPrice TEXT);";
+    QString createTable = "CREATE TABLE IF NOT EXISTS Users(IDCARD TEXT, Login TEXT, Password TEXT, Money INT, CreditStatus BOOL, SumCredit INT, Moneybox INT, HistorySender TEXT, HistoryPrice INT);";
 
     if (query->exec(createTable)) {
         qDebug() << "Table created";

@@ -52,7 +52,7 @@ void sec::on_pushButton_3_clicked()
     query.prepare("SELECT Password FROM Users WHERE Login = :login");
     query.bindValue(":login", globalLogin);
     if (query.exec() && query.first()) {
-        QString password = query.value(0).toString();
+        QString password = query.value("Password").toString();
         QInputDialog passwordDialog;
         passwordDialog.setWindowTitle("Enter Password");
         passwordDialog.setLabelText("Password:");
@@ -123,8 +123,8 @@ void sec::on_pushButton_2_clicked()
 
     checkQuery.bindValue(":login", globalLogin);
     if (checkQuery.exec() && checkQuery.first()) {
-        QString passwordFromDb = checkQuery.value(0).toString();
-        if (passwordFromDb == oldpas) {
+        QString passwordFromDb = checkQuery.value("Password").toString();
+        if (passwordFromDb == oldpas && !newpas.isEmpty()) {
             QSqlQuery updateQuery(db);
             updateQuery.prepare("UPDATE Users SET Password = :pass WHERE Login = :login");
             updateQuery.bindValue(":pass", newpas);

@@ -22,7 +22,7 @@ registration::registration(QWidget *parent) :
         qDebug() << "Failed to connect to database!";
     }
     QSqlQuery query("SELECT * FROM users");
-    query.exec("INSERT INTO Users(IDCARD, Login, Password, Money, CreditStatus, SumCredit, Moneybox)");
+    query.exec("INSERT INTO Users(IDCARD, Login, Password, Money, CreditStatus, SumCredit, Moneybox, HistorySender, HistoryPrice)");
     if (query.exec()) {
         qDebug() << "Table created";
     } else {
@@ -87,7 +87,7 @@ void registration::on_pushButton_clicked()
 
 
         query.prepare("INSERT INTO Users(IDCARD, Login, Password, Money, CreditStatus, SumCredit, Moneybox, HistorySender, HistoryPrice) "
-                          "VALUES (:id, :login, :pass, 0, 0, 0 , 0,  NULL,NULL )");
+                          "VALUES (:id, :login, :pass, 0, 0, 0 , 0,  NULL,0 )");
         query.bindValue(":id", id);
         query.bindValue(":login", login);
         query.bindValue(":pass", pass);

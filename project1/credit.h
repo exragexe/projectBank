@@ -1,7 +1,8 @@
 #ifndef CREDIT_H
 #define CREDIT_H
 
-#include <QDialog>
+
+#include "library.h"
 
 namespace Ui {
 class credit;

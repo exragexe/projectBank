@@ -1,7 +1,7 @@
 #ifndef SIGN_H
 #define SIGN_H
 
-#include <QDialog>
+#include "library.h"
 #include "balance.h"
 #include "payw.h"
 #include "credit.h"
@@ -38,6 +38,8 @@ private slots:
 
     void on_pushButton_13_clicked();
 
+    void on_pushButton_14_clicked();
+
 private:
     Ui::sign *ui;
     balance *balanceWidget;
@@ -47,7 +49,7 @@ private:
     curr *currw;
     mbox *mboxw;
     sec *secw;
-
+    QMainWindow *mainw;
 };
 
 #endif // SIGN_H

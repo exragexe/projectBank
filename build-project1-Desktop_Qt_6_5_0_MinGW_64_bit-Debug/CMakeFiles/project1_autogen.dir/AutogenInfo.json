@@ -362,6 +362,12 @@
 			null
 		],
 		[
+			"D:/qt/projects/project1/library.h",
+			"MU",
+			"EWIEGA46WW/moc_library.cpp",
+			null
+		],
+		[
 			"D:/qt/projects/project1/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",

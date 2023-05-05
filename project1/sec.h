@@ -1,13 +1,8 @@
 #ifndef SEC_H
 #define SEC_H
 
-#include <QDialog>
-#include <QtSql/QSqlDatabase>
-#include <QSqlQuery>
-#include <QMainWindow>
-#include <QMessageBox>
-#include <QString>
-#include <QInputDialog>
+
+#include "library.h"
 
 
 namespace Ui {

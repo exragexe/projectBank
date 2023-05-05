@@ -47,6 +47,7 @@ public:
     QLabel *label_14;
     QPushButton *pushButton_13;
     QLabel *label_15;
+    QPushButton *pushButton_14;
 
     void setupUi(QDialog *sign)
     {
@@ -161,6 +162,10 @@ public:
         label_15->setObjectName("label_15");
         label_15->setGeometry(QRect(486, 619, 139, 127));
         label_15->setStyleSheet(QString::fromUtf8("border-image: url(:/resources/img/g6s2 (1).png);"));
+        pushButton_14 = new QPushButton(sign);
+        pushButton_14->setObjectName("pushButton_14");
+        pushButton_14->setGeometry(QRect(0, 5, 97, 89));
+        pushButton_14->setStyleSheet(QString::fromUtf8("border-image: url(:/resources/img/Group 10.png);"));
         label_2->raise();
         label->raise();
         label_4->raise();
@@ -188,6 +193,7 @@ public:
         pushButton_12->raise();
         pushButton_13->raise();
         label_14->raise();
+        pushButton_14->raise();
 
         retranslateUi(sign);
 
@@ -224,6 +230,7 @@ public:
         label_14->setText(QString());
         pushButton_13->setText(QString());
         label_15->setText(QString());
+        pushButton_14->setText(QString());
     } // retranslateUi
 
 };

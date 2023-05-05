@@ -44,6 +44,7 @@ set(PROJECT_SOURCES
         sec.cpp
         sec.h
         sec.ui
+        library.h
 
         resources.qrc
 )

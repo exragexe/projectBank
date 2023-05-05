@@ -445,6 +445,22 @@
     <string/>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_14">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>5</y>
+     <width>97</width>
+     <height>89</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/resources/img/Group 10.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <zorder>label_2</zorder>
   <zorder>label</zorder>
   <zorder>label_4</zorder>
@@ -472,6 +488,7 @@
   <zorder>pushButton_12</zorder>
   <zorder>pushButton_13</zorder>
   <zorder>label_14</zorder>
+  <zorder>pushButton_14</zorder>
  </widget>
  <resources>
   <include location="resources.qrc"/>

@@ -87,6 +87,10 @@ public:
         listWidget = new QListWidget(payw);
         listWidget->setObjectName("listWidget");
         listWidget->setGeometry(QRect(240, 310, 401, 41));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Corbel")});
+        font1.setPointSize(24);
+        listWidget->setFont(font1);
         listWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(46, 46, 46);"));
         listWidget->setFrameShadow(QFrame::Raised);
         label->raise();

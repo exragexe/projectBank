@@ -1,15 +1,8 @@
 #ifndef REGISTRATION_H
 #define REGISTRATION_H
 
-#include <QDialog>
-#include <QMainWindow>
-#include <QtSql/QSqlDatabase>
-#include <QSqlQuery>
-#include <QStyle>
-#include <QDateTime>
-#include <QChar>
-#include <QPushButton>
-#include <QSqlError>
+
+#include "library.h"
 extern QString globalLogin;
 extern QString globalPassword;
 extern qint64 globalId;

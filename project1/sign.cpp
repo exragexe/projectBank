@@ -1,5 +1,6 @@
 #include "sign.h"
 #include "ui_sign.h"
+#include "mainwindow.h"
 
 
 sign::sign(QWidget *parent) :
@@ -79,5 +80,14 @@ void sign::on_pushButton_13_clicked()
     secw->show();
     this->hide();
     secw->setFixedSize(700,800);
+}
+
+
+void sign::on_pushButton_14_clicked()
+{
+    mainw = new MainWindow(this);
+    mainw->show();
+    this->hide();
+    mainw->setFixedSize(700, 800);
 }
 

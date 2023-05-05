@@ -197,6 +197,12 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Corbel</family>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(46, 46, 46);</string>
    </property>

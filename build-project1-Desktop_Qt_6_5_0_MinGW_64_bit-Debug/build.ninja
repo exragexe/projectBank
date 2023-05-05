@@ -273,7 +273,7 @@ build project1_autogen/EWIEGA46WW/qrc_resources.cpp | ${cmake_ninja_workdir}proj
 #############################################
 # Phony custom command for CMakeFiles\project1_autogen_timestamp_deps
 
-build CMakeFiles/project1_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/project1_autogen_timestamp_deps: phony D$:/qt/6.5.0/mingw_64/./bin/uic.exe D$:/qt/6.5.0/mingw_64/./bin/moc.exe D$:/qt/6.5.0/mingw_64/lib/libQt6Core.a D$:/qt/6.5.0/mingw_64/lib/libQt6Widgets.a D$:/qt/6.5.0/mingw_64/lib/libQt6Sql.a
+build CMakeFiles/project1_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/project1_autogen_timestamp_deps: phony D$:/qt/6.5.0/mingw_64/./bin/moc.exe D$:/qt/6.5.0/mingw_64/./bin/uic.exe D$:/qt/6.5.0/mingw_64/lib/libQt6Sql.a D$:/qt/6.5.0/mingw_64/lib/libQt6Widgets.a D$:/qt/6.5.0/mingw_64/lib/libQt6Core.a
 
 
 #############################################

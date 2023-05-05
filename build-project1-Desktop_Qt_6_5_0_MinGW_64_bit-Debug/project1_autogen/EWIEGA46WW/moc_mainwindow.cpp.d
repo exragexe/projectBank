@@ -438,6 +438,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/projects/project1/bills.h \
   D:/qt/projects/project1/credit.h \
   D:/qt/projects/project1/curr.h \
+  D:/qt/projects/project1/library.h \
   D:/qt/projects/project1/mbox.h \
   D:/qt/projects/project1/payw.h \
   D:/qt/projects/project1/registration.h \

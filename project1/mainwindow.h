@@ -1,20 +1,10 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
-#include <QPushButton>
-#include <QDebug>
-#include <QMessageBox>
-#include <QPixmap>
-#include <QFormLayout>
-#include <QFont>
-#include <QLabel>
-#include <QApplication>
+
 #include "registration.h"
 #include "sign.h"
-#include <QDebug>
-#include <QtSql/QSqlDatabase>
-#include <QSqlQuery>
+#include "library.h"
 #include "sec.h"
 
 

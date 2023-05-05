@@ -1,16 +1,7 @@
 #ifndef BALANCE_H
 #define BALANCE_H
 
-#include <QDialog>
-#include <QtSql/QSqlDatabase>
-#include <QSqlQuery>
-#include <QString>
-#include <QMessageBox>
-#include <QListView>
-#include <QStandardItemModel>
-#include <QSqlQueryModel>
-
-
+#include "library.h"
 
 
 namespace Ui {

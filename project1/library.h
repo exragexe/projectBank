@@ -1,0 +1,26 @@
+#ifndef LIBRARY_H
+#define LIBRARY_H
+#include <QMainWindow>
+#include <QPushButton>
+#include <QDebug>
+#include <QMessageBox>
+#include <QPixmap>
+#include <QFormLayout>
+#include <QFont>
+#include <QLabel>
+#include <QApplication>
+#include <QtSql/QSqlDatabase>
+#include <QSqlQuery>
+#include <QDialog>
+#include <QString>
+#include <QListView>
+#include <QStandardItemModel>
+#include <QSqlQueryModel>
+#include <QListWidget>
+#include <QSqlDatabase>
+#include <QStyle>
+#include <QDateTime>
+#include <QChar>
+#include <QSqlError>
+#include <QInputDialog>
+#endif // LIBRARY_H

@@ -1,7 +1,8 @@
 #ifndef BILLS_H
 #define BILLS_H
 
-#include <QDialog>
+
+#include "library.h"
 
 namespace Ui {
 class bills;

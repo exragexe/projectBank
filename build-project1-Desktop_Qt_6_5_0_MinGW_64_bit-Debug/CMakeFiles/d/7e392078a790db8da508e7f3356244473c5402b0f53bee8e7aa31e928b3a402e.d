@@ -656,6 +656,7 @@ project1_autogen/timestamp: \
   D:/qt/projects/project1/credit.h \
   D:/qt/projects/project1/curr.cpp \
   D:/qt/projects/project1/curr.h \
+  D:/qt/projects/project1/library.h \
   D:/qt/projects/project1/main.cpp \
   D:/qt/projects/project1/mainwindow.cpp \
   D:/qt/projects/project1/mainwindow.h \
