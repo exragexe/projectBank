@@ -171,7 +171,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Corbel</family>
+     <family>Bahnschrift SemiLight Condensed</family>
      <pointsize>28</pointsize>
     </font>
    </property>
@@ -180,6 +180,25 @@
    </property>
    <property name="frame">
     <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>423</y>
+     <width>391</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift SemiLight Condensed</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
   <zorder>label</zorder>
@@ -192,6 +211,7 @@
   <zorder>label_7</zorder>
   <zorder>pushButton_3</zorder>
   <zorder>card</zorder>
+  <zorder>label_3</zorder>
  </widget>
  <resources>
   <include location="resources.qrc"/>

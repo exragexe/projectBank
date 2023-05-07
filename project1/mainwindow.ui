@@ -139,7 +139,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Corbel</family>
+      <family>Bahnschrift SemiLight Condensed</family>
       <pointsize>22</pointsize>
      </font>
     </property>
@@ -158,7 +158,7 @@
     </property>
     <property name="font">
      <font>
-      <family>Lucida Console</family>
+      <family>Bahnschrift SemiLight Condensed</family>
       <pointsize>18</pointsize>
      </font>
     </property>

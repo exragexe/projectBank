@@ -46,7 +46,7 @@ public:
         lineEdit_2->setObjectName("lineEdit_2");
         lineEdit_2->setGeometry(QRect(290, 395, 371, 41));
         QFont font;
-        font.setFamilies({QString::fromUtf8("Corbel")});
+        font.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font.setPointSize(28);
         lineEdit_2->setFont(font);
         lineEdit_2->setFrame(false);

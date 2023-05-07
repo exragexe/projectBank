@@ -89,7 +89,7 @@ public:
         login->setEnabled(true);
         login->setGeometry(QRect(215, 525, 351, 41));
         QFont font2;
-        font2.setFamilies({QString::fromUtf8("Corbel")});
+        font2.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font2.setPointSize(22);
         login->setFont(font2);
         login->setFrame(false);
@@ -97,7 +97,7 @@ public:
         pass->setObjectName("pass");
         pass->setGeometry(QRect(215, 605, 351, 41));
         QFont font3;
-        font3.setFamilies({QString::fromUtf8("Lucida Console")});
+        font3.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font3.setPointSize(18);
         pass->setFont(font3);
         pass->setFrame(false);

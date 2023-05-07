@@ -51,7 +51,7 @@ public:
         payee->setObjectName("payee");
         payee->setGeometry(QRect(240, 410, 391, 41));
         QFont font;
-        font.setFamilies({QString::fromUtf8("Corbel")});
+        font.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font.setPointSize(28);
         payee->setFont(font);
         payee->setFrame(false);
@@ -88,7 +88,7 @@ public:
         listWidget->setObjectName("listWidget");
         listWidget->setGeometry(QRect(240, 310, 401, 41));
         QFont font1;
-        font1.setFamilies({QString::fromUtf8("Corbel")});
+        font1.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font1.setPointSize(24);
         listWidget->setFont(font1);
         listWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(46, 46, 46);"));

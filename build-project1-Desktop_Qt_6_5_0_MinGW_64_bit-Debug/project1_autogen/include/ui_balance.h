@@ -60,14 +60,14 @@ public:
         label_5->setObjectName("label_5");
         label_5->setGeometry(QRect(310, 520, 221, 61));
         QFont font;
-        font.setFamilies({QString::fromUtf8("Corbel")});
+        font.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font.setPointSize(22);
         label_5->setFont(font);
         listView = new QListView(balance);
         listView->setObjectName("listView");
         listView->setGeometry(QRect(290, 630, 256, 221));
         QFont font1;
-        font1.setFamilies({QString::fromUtf8("Corbel")});
+        font1.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font1.setPointSize(24);
         listView->setFont(font1);
         listView->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
@@ -89,7 +89,7 @@ public:
         label_7->setObjectName("label_7");
         label_7->setGeometry(QRect(34, 343, 151, 51));
         QFont font3;
-        font3.setFamilies({QString::fromUtf8("Bahnschrift Condensed")});
+        font3.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font3.setPointSize(18);
         label_7->setFont(font3);
         label_7->setStyleSheet(QString::fromUtf8(""));

@@ -47,7 +47,7 @@ public:
         login->setEnabled(true);
         login->setGeometry(QRect(225, 534, 351, 30));
         QFont font;
-        font.setFamilies({QString::fromUtf8("Corbel")});
+        font.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font.setPointSize(18);
         login->setFont(font);
         login->setFrame(false);

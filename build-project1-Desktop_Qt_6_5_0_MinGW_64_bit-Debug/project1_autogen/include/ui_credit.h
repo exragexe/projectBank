@@ -14,6 +14,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
@@ -23,8 +24,6 @@ class Ui_credit
 public:
     QLabel *label_6;
     QLabel *label_3;
-    QLineEdit *lineEdit_2;
-    QLineEdit *lineEdit_3;
     QLineEdit *lineEdit;
     QLabel *label_2;
     QLabel *label_4;
@@ -32,6 +31,8 @@ public:
     QLabel *label;
     QPushButton *pushButton_2;
     QPushButton *pushButton;
+    QLabel *label_8;
+    QListWidget *listWidget;
 
     void setupUi(QDialog *credit)
     {
@@ -46,22 +47,12 @@ public:
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(228, 353, 417, 211));
         label_3->setPixmap(QPixmap(QString::fromUtf8(":/resources/img/Group 15.png")));
-        lineEdit_2 = new QLineEdit(credit);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(240, 410, 391, 41));
-        QFont font;
-        font.setFamilies({QString::fromUtf8("Corbel")});
-        font.setPointSize(28);
-        lineEdit_2->setFont(font);
-        lineEdit_2->setFrame(false);
-        lineEdit_3 = new QLineEdit(credit);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setGeometry(QRect(240, 510, 391, 41));
-        lineEdit_3->setFont(font);
-        lineEdit_3->setFrame(false);
         lineEdit = new QLineEdit(credit);
         lineEdit->setObjectName("lineEdit");
         lineEdit->setGeometry(QRect(240, 310, 391, 41));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
+        font.setPointSize(28);
         lineEdit->setFont(font);
         lineEdit->setFrame(false);
         label_2 = new QLabel(credit);
@@ -88,17 +79,37 @@ public:
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(600, 10, 97, 89));
         pushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/resources/img/Group 10.png);"));
+        label_8 = new QLabel(credit);
+        label_8->setObjectName("label_8");
+        label_8->setGeometry(QRect(240, 520, 391, 41));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Bahnschrift SemiCondensed")});
+        font1.setPointSize(22);
+        label_8->setFont(font1);
+        listWidget = new QListWidget(credit);
+        new QListWidgetItem(listWidget);
+        new QListWidgetItem(listWidget);
+        new QListWidgetItem(listWidget);
+        new QListWidgetItem(listWidget);
+        listWidget->setObjectName("listWidget");
+        listWidget->setGeometry(QRect(240, 415, 411, 31));
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
+        font2.setPointSize(22);
+        listWidget->setFont(font2);
+        listWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(46, 46, 46);"));
+        listWidget->setFrameShadow(QFrame::Raised);
         label->raise();
         pushButton_2->raise();
         pushButton->raise();
         label_2->raise();
         label_3->raise();
-        lineEdit_3->raise();
         lineEdit->raise();
-        lineEdit_2->raise();
         label_6->raise();
         label_5->raise();
         label_4->raise();
+        label_8->raise();
+        listWidget->raise();
 
         retranslateUi(credit);
 
@@ -110,8 +121,6 @@ public:
         credit->setWindowTitle(QCoreApplication::translate("credit", "Dialog", nullptr));
         label_6->setText(QString());
         label_3->setText(QString());
-        lineEdit_2->setText(QString());
-        lineEdit_3->setText(QString());
         lineEdit->setText(QString());
         label_2->setText(QString());
         label_4->setText(QString());
@@ -119,6 +128,20 @@ public:
         label->setText(QString());
         pushButton_2->setText(QString());
         pushButton->setText(QString());
+        label_8->setText(QString());
+
+        const bool __sortingEnabled = listWidget->isSortingEnabled();
+        listWidget->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem = listWidget->item(0);
+        ___qlistwidgetitem->setText(QCoreApplication::translate("credit", "1 month", nullptr));
+        QListWidgetItem *___qlistwidgetitem1 = listWidget->item(1);
+        ___qlistwidgetitem1->setText(QCoreApplication::translate("credit", "3 month", nullptr));
+        QListWidgetItem *___qlistwidgetitem2 = listWidget->item(2);
+        ___qlistwidgetitem2->setText(QCoreApplication::translate("credit", "6 month", nullptr));
+        QListWidgetItem *___qlistwidgetitem3 = listWidget->item(3);
+        ___qlistwidgetitem3->setText(QCoreApplication::translate("credit", "12 month", nullptr));
+        listWidget->setSortingEnabled(__sortingEnabled);
+
     } // retranslateUi
 
 };

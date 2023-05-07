@@ -67,27 +67,35 @@ void payw::on_pushButton_2_clicked()
     } else {
         QSqlQuery query(db);
         query.prepare("SELECT * FROM Users WHERE IDCARD = :idcard");
-        query.bindValue(":idcard", idcard);
+        query.bindValue(":idcard", idcard);//ui->listWidget->currentItem()->text());
 
-        if (query.exec() && query.first() && (sum.toInt()> 0) && !payee.isEmpty() && !sum.isEmpty() && payee != idcard) {
+        //ui->listWidget->currentItem()->text()!=nullptr
+        if (query.exec() && query.first() &&  (sum.toInt()> 0)&& sum.toInt() < query.value("Money").toInt() && !payee.isEmpty() && !sum.isEmpty() && payee != query.value("IDCARD").toString() ) {
             money = query.value("Money").toInt();
-            QString idsender = query.value("IDCARD").toString();
+
 
             QSqlQuery updateQuery(db);
             updateQuery.prepare("UPDATE Users SET HistorySender = :hiss, HistoryPrice = :hisp, Money = :money WHERE IDCARD = :idcard");
             updateQuery.bindValue(":hiss", payee);
             updateQuery.bindValue(":hisp", sum);
             updateQuery.bindValue(":money", money - sum.toInt());
+            updateQuery.bindValue(":idcard", idcard);
             QSqlQuery querysend(db);
             querysend.prepare("SELECT * FROM Users WHERE IDCARD = :idcardsend");
             querysend.bindValue(":idcardsend", payee);
 
-            if (querysend.exec() && querysend.first()) {
-                QSqlQuery updatesendQuery(db);
-                updatesendQuery.prepare("UPDATE Users SET Money = :money WHERE IDCARD = :idcardsend");
-                updatesendQuery.bindValue(":money", querysend.value("Money").toInt() + sum.toInt());
 
-                if (updateQuery.exec() && updatesendQuery.exec()){
+            if (querysend.exec() && querysend.first()) {
+
+                querysend.prepare("UPDATE Users SET Money = :money WHERE IDCARD = :idcardsend");
+                querysend.bindValue(":idcardsend", payee);
+                querysend.bindValue(":money", querysend.value("Money").toInt() + sum.toInt());
+
+                qDebug() << sum.toInt();
+                qDebug() << updateQuery.value(payee);
+
+
+                if (updateQuery.exec() && querysend.exec()){
                     ui->payee->clear();
                     ui->sum->clear();
                     QMessageBox* msgBox = new QMessageBox(this);
@@ -100,33 +108,45 @@ void payw::on_pushButton_2_clicked()
                     okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
                     QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
                     db.commit();
-                     }
-                else {
-                       QMessageBox* msgBox = new QMessageBox(this);
-                       msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-                       msgBox->setText("Error: Payment not confirm!");
-                       msgBox->setWindowTitle("Payment");
-                       msgBox->setIcon(QMessageBox::Critical);
-                       QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
-                       okButton->setFixedSize(80,30);
-                       okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
-                       QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
-                    }
-                    }
-             else{
+                 }
+                 else {
+                    QMessageBox* msgBox = new QMessageBox(this);
+                    msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+                    msgBox->setText("Error: Payment not confirm!");
+                    msgBox->setWindowTitle("Payment");
+                    msgBox->setIcon(QMessageBox::Critical);
+                    QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+                    okButton->setFixedSize(80,30);
+                    okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+                    QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+                }
+                db.commit();
+            }
+            else{
                 QMessageBox* msgBox = new QMessageBox(this);
                 msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
                 msgBox->setText("Error: Payment not confirm!");
                 msgBox->setWindowTitle("Payment");
                 msgBox->setIcon(QMessageBox::Critical);
-                 QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
-                 okButton->setFixedSize(80,30);
-                 okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
-                 QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
-              }
-
+                QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+                okButton->setFixedSize(80,30);
+                okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+                QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+            }
+            db.commit();
         }
-    }
+        else{
+            QMessageBox* msgBox = new QMessageBox(this);
+            msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+            msgBox->setText("Error: Payment not confirm!");
+            msgBox->setWindowTitle("Payment");
+            msgBox->setIcon(QMessageBox::Critical);
+             QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+             okButton->setFixedSize(80,30);
+             okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+             QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+        }
+    }   db.commit();
 }
 
 

@@ -56,7 +56,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Corbel</family>
+     <family>Bahnschrift SemiLight Condensed</family>
      <pointsize>28</pointsize>
     </font>
    </property>
@@ -78,7 +78,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Corbel</family>
+     <family>Bahnschrift SemiLight Condensed</family>
      <pointsize>28</pointsize>
     </font>
    </property>
@@ -199,7 +199,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Corbel</family>
+     <family>Bahnschrift SemiLight Condensed</family>
      <pointsize>24</pointsize>
     </font>
    </property>

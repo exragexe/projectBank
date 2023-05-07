@@ -31,6 +31,7 @@ public:
     QLabel *label_7;
     QPushButton *pushButton_3;
     QLineEdit *card;
+    QLabel *label_3;
 
     void setupUi(QDialog *mbox)
     {
@@ -77,10 +78,17 @@ public:
         card->setObjectName("card");
         card->setGeometry(QRect(240, 518, 391, 41));
         QFont font;
-        font.setFamilies({QString::fromUtf8("Corbel")});
+        font.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font.setPointSize(28);
         card->setFont(font);
         card->setFrame(false);
+        label_3 = new QLabel(mbox);
+        label_3->setObjectName("label_3");
+        label_3->setGeometry(QRect(240, 423, 391, 41));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
+        font1.setPointSize(22);
+        label_3->setFont(font1);
         label->raise();
         label_6->raise();
         pushButton_2->raise();
@@ -91,6 +99,7 @@ public:
         label_7->raise();
         pushButton_3->raise();
         card->raise();
+        label_3->raise();
 
         retranslateUi(mbox);
 
@@ -113,6 +122,7 @@ public:
         label_7->setText(QString());
         pushButton_3->setText(QString());
         card->setText(QString());
+        label_3->setText(QString());
     } // retranslateUi
 
 };

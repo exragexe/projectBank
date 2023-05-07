@@ -45,50 +45,6 @@
     <pixmap resource="resources.qrc">:/resources/img/Group 15.png</pixmap>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>410</y>
-     <width>391</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Corbel</family>
-     <pointsize>28</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="frame">
-    <bool>false</bool>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>510</y>
-     <width>391</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Corbel</family>
-     <pointsize>28</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="frame">
-    <bool>false</bool>
-   </property>
-  </widget>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
@@ -100,7 +56,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Corbel</family>
+     <family>Bahnschrift SemiLight Condensed</family>
      <pointsize>28</pointsize>
     </font>
    </property>
@@ -207,17 +163,78 @@
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="label_8">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>520</y>
+     <width>391</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift SemiCondensed</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>415</y>
+     <width>411</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift SemiLight Condensed</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(46, 46, 46);</string>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <item>
+    <property name="text">
+     <string>1 month</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3 month</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>6 month</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12 month</string>
+    </property>
+   </item>
+  </widget>
   <zorder>label</zorder>
   <zorder>pushButton_2</zorder>
   <zorder>pushButton</zorder>
   <zorder>label_2</zorder>
   <zorder>label_3</zorder>
-  <zorder>lineEdit_3</zorder>
   <zorder>lineEdit</zorder>
-  <zorder>lineEdit_2</zorder>
   <zorder>label_6</zorder>
   <zorder>label_5</zorder>
   <zorder>label_4</zorder>
+  <zorder>label_8</zorder>
+  <zorder>listWidget</zorder>
  </widget>
  <resources>
   <include location="resources.qrc"/>
