@@ -25,7 +25,7 @@ private slots:
 private:
     Ui::credit *ui;
     QDialog *sign;
-    int procentforsend ;
+    double procentforsend ;
 };
 
 #endif // CREDIT_H

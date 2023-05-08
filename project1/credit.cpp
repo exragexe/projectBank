@@ -12,7 +12,7 @@ credit::credit(QDialog *sign, QWidget *parent) :
     setStyleSheet("background-color: transparent;");
     ui->lineEdit->setStyleSheet("background-color: #2E2E2E;");
 
-
+    connect(ui->listWidget, &QListWidget::currentItemChanged, this, &credit::updatePercent);
     connect(ui->lineEdit, &QLineEdit::textChanged, this, &credit::updatePercent);
 }
 
@@ -41,16 +41,19 @@ void credit::on_pushButton_2_clicked()
 
         query.prepare("SELECT * FROM Users WHERE Login = :login");
         query.bindValue(":login", globalLogin);
-        if(query.exec() && query.first() && !sum.isEmpty() && sum.toInt() > 0 && query.value("CreditStatus").toBool()==false){
+        if(query.exec() && query.first()&& ui->listWidget->currentItem()->text() != nullptr && !sum.isEmpty() && sum.toInt() > 0 && query.value("CreditStatus").toBool()==false){
             QSqlQuery updateQuery(db);
             updateQuery.prepare("UPDATE Users SET CreditStatus = :credstat, SumCredit = :credsum, Money = :money WHERE Login = :login");
             updateQuery.bindValue(":login", globalLogin);
+            //qDebug()<<query.value(3).toInt();
             if(ui->listWidget->currentItem()->text() == "1 month"){
                 procentforsend =(1.0/sum.toInt()) * 100.0;
                 updateQuery.bindValue(":credstat", true);
                 updateQuery.bindValue(":credsum", sum.toInt()*procentforsend);
 
-                updateQuery.bindValue(":money", sum.toInt()+ updateQuery.value("Money").toInt());
+                updateQuery.bindValue(":money", sum.toInt()+ query.value("Money").toInt());
+
+                //qDebug()<<sum.toInt()+query.value("Money").toInt();
 
             }
 
@@ -59,7 +62,8 @@ void credit::on_pushButton_2_clicked()
                 ui->label_8->setText(QString::number(procentforsend));
                 updateQuery.bindValue(":credstat", true);
                 updateQuery.bindValue(":credsum", sum.toInt()*procentforsend);
-                updateQuery.bindValue(":money", sum.toInt()+ updateQuery.value("Money").toInt());
+                updateQuery.bindValue(":money", sum.toInt()+ query.value("Money").toInt());
+
             }
 
             else if(ui->listWidget->currentItem()->text() == "6 month"){
@@ -67,7 +71,8 @@ void credit::on_pushButton_2_clicked()
                 ui->label_8->setText(QString::number(procentforsend));
                 updateQuery.bindValue(":credstat", true);
                 updateQuery.bindValue(":credsum", sum.toInt()*procentforsend);
-                updateQuery.bindValue(":money", sum.toInt()+ updateQuery.value("Money").toInt());
+                updateQuery.bindValue(":money", sum.toInt()+ query.value("Money").toInt());
+
             }
 
             else if(ui->listWidget->currentItem()->text() == "12 month"){
@@ -75,8 +80,10 @@ void credit::on_pushButton_2_clicked()
                 ui->label_8->setText(QString::number(procentforsend));
                 updateQuery.bindValue(":credstat", true);
                 updateQuery.bindValue(":credsum", sum.toInt()*procentforsend);
-                updateQuery.bindValue(":money", sum.toInt()+ updateQuery.value("Money").toInt());
+                updateQuery.bindValue(":money", sum.toInt()+ query.value("Money").toInt());
+
             }
+
             else{
                 QMessageBox* msgBox = new QMessageBox(this);
                 msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
@@ -92,18 +99,22 @@ void credit::on_pushButton_2_clicked()
 
                 qDebug() << "Error message: " << query.lastError().text();
             }
+            if(updateQuery.exec()){
+                db.commit();
+                ui->lineEdit->text().clear();
+                QMessageBox* msgBox = new QMessageBox(this);
+                msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
+                msgBox->setText("Credit confirn!");
+                msgBox->setWindowTitle("Credit");
+                msgBox->setIcon(QMessageBox::Information);
 
-            QMessageBox* msgBox = new QMessageBox(this);
-            msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-            msgBox->setText("Credit confirn!");
-            msgBox->setWindowTitle("Credit");
-            msgBox->setIcon(QMessageBox::Information);
+                QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
+                okButton->setFixedSize(80,30);
+                okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
 
-            QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
-            okButton->setFixedSize(80,30);
-            okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
+                QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
+            }
 
-            QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
 
 
         }
@@ -122,17 +133,37 @@ void credit::on_pushButton_2_clicked()
 
             qDebug() << "Error message: " << query.lastError().text();
         }
+        db.commit();
     }
 }
 void credit::updatePercent()
 {
-    bool ok;
-    //int procentforsend =(12.0/ui->lineEdit->text().toInt()) * 100.0;
+    QString sum = ui->lineEdit->text();
 
 
-    if (ok) {
+    if(ui->listWidget->currentItem()){
 
+        if(ui->listWidget->currentItem()->text() == "1 month"){
+            procentforsend =(1.0/sum.toInt()) * 100.0;
+        }
+
+        else if(ui->listWidget->currentItem()->text() == "3 month"){
+            procentforsend =(3.0/sum.toInt()) * 100.0;
+            ui->label_8->setText(QString::number(procentforsend));
+
+        }
+        else if(ui->listWidget->currentItem()->text() == "6 month"){
+            procentforsend =(6.0/sum.toInt()) * 100.0;
+            ui->label_8->setText(QString::number(procentforsend));
+        }
+        else if(ui->listWidget->currentItem()->text() == "12 month"){
+            procentforsend =(12.0/sum.toInt()) * 100.0;
+            ui->label_8->setText(QString::number(procentforsend));
+        }
         ui->label_8->setText(QString::number(procentforsend));
+    }
+    else{
+         ui->label_8->setText("-");
     }
 }
 

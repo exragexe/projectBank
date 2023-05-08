@@ -23,4 +23,6 @@
 #include <QChar>
 #include <QSqlError>
 #include <QInputDialog>
+#include <QStringList>
+#include <QStringListModel>
 #endif // LIBRARY_H

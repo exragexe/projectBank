@@ -24,51 +24,40 @@ balance::balance(QDialog *sign,QWidget *parent) :
         //balance
         query.prepare("SELECT * FROM Users WHERE Login = :login");
         query.bindValue(":login", globalLogin);
-
-
         if (query.exec() && query.first()) {
             QString money = query.value("Money").toString();
             ui->label_5->setText(money + " $");
-            //QString idcard = query.value("IDCARD").toString();
-
-            //QSqlQuery updateQuery(db);
-            //updateQuery.prepare("UPDATE Users SET Money = :money WHERE IDCARD = :idcard");
-            //updateQuery.bindValue(":money",999);
-            //updateQuery.bindValue(":idcard",idcard);
-            //if(updateQuery.exec()){
-            //
-            //}
-            //else{
-            //    qDebug() << "Error updating database: " << updateQuery.lastError();
-            //}
-
-
-        } else {
-               qDebug() << "Error executing query: " << query.lastError();
-        }
-
-        //history
-        QSqlQueryModel * modal = new QSqlQueryModel();
-
-        query.prepare("SELECT * FROM Users WHERE Login = :login");
-        query.bindValue(":login", globalLogin);
-        if (query.exec() && query.first()) {
-            QString hisp = query.value("HistoryPrice").toString();
-            QString hiss = query.value("HistorySender").toString();
-
-
-            modal->setQuery(hisp + hiss);
-
-            ui->listView->setModel(modal);
-
             ui->label_7->setText(query.value("IDCARD").toString());
+
+           //ДОРОБИТИ //QStringList history;
+           //ДОРОБИТИ //QString hisp = query.value("HistoryPrice").toString();
+           //ДОРОБИТИ //QString hiss = query.value("HistorySender").toString();
+           //ДОРОБИТИ //QStringList historyPrices = hisp.split(",");
+           //ДОРОБИТИ //QStringList historySenders = hiss.split(",");
+           //ДОРОБИТИ ////QStringListModel * modal = new QStringListModel();
+
+           //ДОРОБИТИ //QStandardItemModel *model = new QStandardItemModel(this);
+           //ДОРОБИТИ //QAbstractItemModel *currentModel = ui->listView->model();
+           //ДОРОБИТИ //if (currentModel) {
+           //ДОРОБИТИ //    for (int i = 0; i < currentModel->rowCount(); i++) {
+           //ДОРОБИТИ //        QList<QStandardItem *> items;
+           //ДОРОБИТИ //        items << new QStandardItem(currentModel->index(i, 0).data().toString());
+           //ДОРОБИТИ //        items << new QStandardItem(currentModel->index(i, 1).data().toString());
+           //ДОРОБИТИ //        model->appendRow(items);
+           //ДОРОБИТИ //    }
+           //ДОРОБИТИ //}
+           //ДОРОБИТИ //QStandardItem *priceItem = new QStandardItem(query.value("HistoryPrice").toString());
+           //ДОРОБИТИ //QStandardItem *senderItem = new QStandardItem(query.value("HistorySender").toString());
+           //ДОРОБИТИ //model->appendRow({priceItem, senderItem});
+           //ДОРОБИТИ //ui->listView->setModel(model);
+
+
         } else {
-
+            qDebug() << "Error executing query: " << query.lastError();
         }
+
+
     }
-
-
-
 }
 
 balance::~balance()

@@ -3,6 +3,8 @@ project1_autogen/timestamp: \
   D:/qt/6.5.0/mingw_64/include/QtCore/QDateTime \
   D:/qt/6.5.0/mingw_64/include/QtCore/QDebug \
   D:/qt/6.5.0/mingw_64/include/QtCore/QString \
+  D:/qt/6.5.0/mingw_64/include/QtCore/QStringList \
+  D:/qt/6.5.0/mingw_64/include/QtCore/QStringListModel \
   D:/qt/6.5.0/mingw_64/include/QtCore/q20memory.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/q20type_traits.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qabstractitemmodel.h \
@@ -92,6 +94,7 @@ project1_autogen/timestamp: \
   D:/qt/6.5.0/mingw_64/include/QtCore/qstringconverter_base.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qstringfwd.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qstringlist.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qstringlistmodel.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qstringliteral.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qstringmatcher.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qstringtokenizer.h \
