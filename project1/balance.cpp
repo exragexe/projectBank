@@ -29,27 +29,20 @@ balance::balance(QDialog *sign,QWidget *parent) :
             ui->label_5->setText(money + " $");
             ui->label_7->setText(query.value("IDCARD").toString());
 
-           //ДОРОБИТИ //QStringList history;
-           //ДОРОБИТИ //QString hisp = query.value("HistoryPrice").toString();
-           //ДОРОБИТИ //QString hiss = query.value("HistorySender").toString();
-           //ДОРОБИТИ //QStringList historyPrices = hisp.split(",");
-           //ДОРОБИТИ //QStringList historySenders = hiss.split(",");
-           //ДОРОБИТИ ////QStringListModel * modal = new QStringListModel();
 
-           //ДОРОБИТИ //QStandardItemModel *model = new QStandardItemModel(this);
-           //ДОРОБИТИ //QAbstractItemModel *currentModel = ui->listView->model();
-           //ДОРОБИТИ //if (currentModel) {
-           //ДОРОБИТИ //    for (int i = 0; i < currentModel->rowCount(); i++) {
-           //ДОРОБИТИ //        QList<QStandardItem *> items;
-           //ДОРОБИТИ //        items << new QStandardItem(currentModel->index(i, 0).data().toString());
-           //ДОРОБИТИ //        items << new QStandardItem(currentModel->index(i, 1).data().toString());
-           //ДОРОБИТИ //        model->appendRow(items);
-           //ДОРОБИТИ //    }
-           //ДОРОБИТИ //}
-           //ДОРОБИТИ //QStandardItem *priceItem = new QStandardItem(query.value("HistoryPrice").toString());
-           //ДОРОБИТИ //QStandardItem *senderItem = new QStandardItem(query.value("HistorySender").toString());
-           //ДОРОБИТИ //model->appendRow({priceItem, senderItem});
-           //ДОРОБИТИ //ui->listView->setModel(model);
+            QString hisp = query.value("HistoryPrice").toString();
+            QString hiss = query.value("HistorySender").toString();
+            QStringList historyPrices = hisp.split(",");
+            QStringList historySenders = hiss.split(",");
+            QStandardItemModel *model = new QStandardItemModel(this);
+
+            for (int i = 0; i < historyPrices.size(); i++) {
+                QStandardItem *item = new QStandardItem(historyPrices[i] +"$ " + historySenders[i]);
+                model->appendRow(item);
+
+            }
+
+            ui->listView->setModel(model);
 
 
         } else {

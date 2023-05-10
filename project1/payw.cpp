@@ -71,22 +71,30 @@ void payw::on_pushButton_2_clicked()
 
         //ui->listWidget->currentItem()->text()!=nullptr
         if (ui->listWidget->currentItem() && query.exec() && query.first() &&  (sum.toInt()> 0)&& sum.toInt() < query.value("Money").toInt() && !payee.isEmpty() && !sum.isEmpty() && payee != query.value("IDCARD").toString() ) {
+            QString currentHiss = query.value("HistorySender").toString();
+            QString currentHisp = query.value("HistoryPrice").toString();
+            QString newHiss = currentHiss.isEmpty() ? payee : currentHiss + "," + payee;
+            QString newHisp = currentHisp.isEmpty() ? "-"+sum : currentHisp + "," + "-"+sum;
             money = query.value("Money").toInt();
             QSqlQuery updateQuery(db);
             updateQuery.prepare("UPDATE Users SET HistorySender = :hiss, HistoryPrice = :hisp, Money = :money WHERE IDCARD = :idcard");
-            updateQuery.bindValue(":hiss", payee);
-            updateQuery.bindValue(":hisp", sum);//"-" + sum);
+            updateQuery.bindValue(":hiss", newHiss);
+            updateQuery.bindValue(":hisp", newHisp);
             updateQuery.bindValue(":money", money - sum.toInt());
             updateQuery.bindValue(":idcard", idcard);
             QSqlQuery querysend(db);
             querysend.prepare("SELECT * FROM Users WHERE IDCARD = :idcardsend");
             querysend.bindValue(":idcardsend", payee);
             if (querysend.exec() && querysend.first()) {
+                QString currentHissforsend = querysend.value("HistorySender").toString();
+                QString currentHispforsend = querysend.value("HistoryPrice").toString();
+                QString newHissforsend = currentHissforsend.isEmpty() ? payee : currentHissforsend + "," + idcard;
+                QString newHispforsend = currentHispforsend.isEmpty() ?"+"+sum : currentHispforsend + "," + "+"+sum;
                 QSqlQuery updateQuerysend(db);
                 updateQuerysend.prepare("UPDATE Users SET HistorySender = :hiss, HistoryPrice = :hisp, Money = :money WHERE IDCARD = :idcardsend");
                 updateQuerysend.bindValue(":idcardsend", payee);
-                updateQuerysend.bindValue(":hiss", idcard);
-                updateQuerysend.bindValue(":hisp", sum);//"+" + sum);
+                updateQuerysend.bindValue(":hiss", newHissforsend);
+                updateQuerysend.bindValue(":hisp", newHispforsend);
                 updateQuerysend.bindValue(":money", querysend.value("Money").toInt() + sum.toInt());
                 qDebug() << sum.toInt();
                 qDebug() << querysend.value(payee);

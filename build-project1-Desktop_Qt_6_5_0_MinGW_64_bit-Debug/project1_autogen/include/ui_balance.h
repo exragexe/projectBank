@@ -30,6 +30,7 @@ public:
     QListView *listView;
     QLabel *label_6;
     QLabel *label_7;
+    QLabel *label_8;
 
     void setupUi(QDialog *balance)
     {
@@ -66,10 +67,7 @@ public:
         listView = new QListView(balance);
         listView->setObjectName("listView");
         listView->setGeometry(QRect(290, 630, 256, 221));
-        QFont font1;
-        font1.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
-        font1.setPointSize(24);
-        listView->setFont(font1);
+        listView->setFont(font);
         listView->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
         listView->setFrameShadow(QFrame::Raised);
         listView->setLineWidth(1);
@@ -79,20 +77,37 @@ public:
         label_6 = new QLabel(balance);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(20, 330, 181, 81));
-        QFont font2;
-        font2.setFamilies({QString::fromUtf8("Bahnschrift Condensed")});
-        font2.setPointSize(22);
-        label_6->setFont(font2);
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Bahnschrift Condensed")});
+        font1.setPointSize(22);
+        label_6->setFont(font1);
         label_6->setStyleSheet(QString::fromUtf8("background-image: url(:/resources/img/curr (1).png);\n"
 ""));
         label_7 = new QLabel(balance);
         label_7->setObjectName("label_7");
         label_7->setGeometry(QRect(34, 343, 151, 51));
+        QFont font2;
+        font2.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
+        font2.setPointSize(18);
+        label_7->setFont(font2);
+        label_7->setStyleSheet(QString::fromUtf8(""));
+        label_8 = new QLabel(balance);
+        label_8->setObjectName("label_8");
+        label_8->setGeometry(QRect(300, 630, 231, 221));
         QFont font3;
         font3.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
-        font3.setPointSize(18);
-        label_7->setFont(font3);
-        label_7->setStyleSheet(QString::fromUtf8(""));
+        font3.setPointSize(20);
+        label_8->setFont(font3);
+        label_8->raise();
+        label->raise();
+        label_2->raise();
+        label_3->raise();
+        label_4->raise();
+        pushButton->raise();
+        label_5->raise();
+        label_6->raise();
+        label_7->raise();
+        listView->raise();
 
         retranslateUi(balance);
 
@@ -110,6 +125,7 @@ public:
         label_5->setText(QString());
         label_6->setText(QString());
         label_7->setText(QString());
+        label_8->setText(QString());
     } // retranslateUi
 
 };

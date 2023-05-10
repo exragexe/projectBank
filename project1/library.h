@@ -25,4 +25,6 @@
 #include <QInputDialog>
 #include <QStringList>
 #include <QStringListModel>
+#include <QStandardItemModel>
+
 #endif // LIBRARY_H
