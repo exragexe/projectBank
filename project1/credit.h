@@ -22,6 +22,7 @@ private slots:
     void on_pushButton_2_clicked();
     void updatePercent();
 
+
 private:
     Ui::credit *ui;
     QDialog *sign;

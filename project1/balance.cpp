@@ -24,7 +24,9 @@ balance::balance(QDialog *sign,QWidget *parent) :
         //balance
         query.prepare("SELECT * FROM Users WHERE Login = :login");
         query.bindValue(":login", globalLogin);
+
         if (query.exec() && query.first()) {
+
             QString money = query.value("Money").toString();
             ui->label_5->setText(money + " $");
             ui->label_7->setText(query.value("IDCARD").toString());
@@ -39,10 +41,27 @@ balance::balance(QDialog *sign,QWidget *parent) :
             for (int i = 0; i < historyPrices.size(); i++) {
                 QStandardItem *item = new QStandardItem(historyPrices[i] +"$ " + historySenders[i]);
                 model->appendRow(item);
-
             }
 
             ui->listView->setModel(model);
+            ui->listView->setEditTriggers(QAbstractItemView::NoEditTriggers);
+            QDateTime currentDateTime = QDateTime::currentDateTime();
+            QString dateString = currentDateTime.toString("yyyy.MM.dd");
+            QSqlQuery querycredit(db);
+
+            if(query.value("CreditStatus").toString()=="true" && dateString == query.value("Term").toString() ){
+                QSqlQuery updatequery(db);
+                updatequery.prepare("UPDATE Users SET BlockCard = :block WHERE Login =:login" );
+                updatequery.bindValue(":login", globalLogin);
+                updatequery.bindValue(":block", true);
+                if(updatequery.exec() && updatequery.first()){
+                    qDebug()<<"card block";
+                }
+                else{
+                    qDebug()<<"card not block. ERORE";
+                }
+
+            }
 
 
         } else {

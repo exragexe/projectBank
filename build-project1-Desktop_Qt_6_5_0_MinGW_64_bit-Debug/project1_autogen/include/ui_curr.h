@@ -13,6 +13,8 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 
 QT_BEGIN_NAMESPACE
@@ -28,6 +30,10 @@ public:
     QLabel *label;
     QPushButton *sel;
     QPushButton *pushButton_4;
+    QLineEdit *lineEdit;
+    QLabel *label_4;
+    QListWidget *listWidget;
+    QListWidget *listWidget_2;
 
     void setupUi(QDialog *curr)
     {
@@ -68,6 +74,39 @@ public:
         pushButton_4->setObjectName("pushButton_4");
         pushButton_4->setGeometry(QRect(162, 637, 71, 71));
         pushButton_4->setStyleSheet(QString::fromUtf8("border-image: url(:/resources/img/curr (2).png);"));
+        lineEdit = new QLineEdit(curr);
+        lineEdit->setObjectName("lineEdit");
+        lineEdit->setGeometry(QRect(240, 420, 401, 41));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
+        font.setPointSize(26);
+        lineEdit->setFont(font);
+        lineEdit->setFrame(false);
+        label_4 = new QLabel(curr);
+        label_4->setObjectName("label_4");
+        label_4->setGeometry(QRect(240, 525, 401, 31));
+        label_4->setFont(font);
+        listWidget = new QListWidget(curr);
+        new QListWidgetItem(listWidget);
+        new QListWidgetItem(listWidget);
+        new QListWidgetItem(listWidget);
+        new QListWidgetItem(listWidget);
+        listWidget->setObjectName("listWidget");
+        listWidget->setGeometry(QRect(70, 398, 111, 61));
+        QFont font1;
+        font1.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
+        font1.setPointSize(48);
+        listWidget->setFont(font1);
+        listWidget->setFrameShape(QFrame::NoFrame);
+        listWidget_2 = new QListWidget(curr);
+        new QListWidgetItem(listWidget_2);
+        new QListWidgetItem(listWidget_2);
+        new QListWidgetItem(listWidget_2);
+        new QListWidgetItem(listWidget_2);
+        listWidget_2->setObjectName("listWidget_2");
+        listWidget_2->setGeometry(QRect(70, 492, 111, 61));
+        listWidget_2->setFont(font1);
+        listWidget_2->setFrameShape(QFrame::NoFrame);
         label->raise();
         label_3->raise();
         label_5->raise();
@@ -76,6 +115,10 @@ public:
         buy->raise();
         sel->raise();
         pushButton_4->raise();
+        lineEdit->raise();
+        label_4->raise();
+        listWidget->raise();
+        listWidget_2->raise();
 
         retranslateUi(curr);
 
@@ -96,6 +139,34 @@ public:
         label->setText(QString());
         sel->setText(QString());
         pushButton_4->setText(QString());
+        lineEdit->setText(QString());
+        label_4->setText(QCoreApplication::translate("curr", "<html><head/><body><p align=\"center\"><br/></p></body></html>", nullptr));
+
+        const bool __sortingEnabled = listWidget->isSortingEnabled();
+        listWidget->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem = listWidget->item(0);
+        ___qlistwidgetitem->setText(QCoreApplication::translate("curr", "USD", nullptr));
+        QListWidgetItem *___qlistwidgetitem1 = listWidget->item(1);
+        ___qlistwidgetitem1->setText(QCoreApplication::translate("curr", "PLN", nullptr));
+        QListWidgetItem *___qlistwidgetitem2 = listWidget->item(2);
+        ___qlistwidgetitem2->setText(QCoreApplication::translate("curr", "UAH", nullptr));
+        QListWidgetItem *___qlistwidgetitem3 = listWidget->item(3);
+        ___qlistwidgetitem3->setText(QCoreApplication::translate("curr", "EUR", nullptr));
+        listWidget->setSortingEnabled(__sortingEnabled);
+
+
+        const bool __sortingEnabled1 = listWidget_2->isSortingEnabled();
+        listWidget_2->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem4 = listWidget_2->item(0);
+        ___qlistwidgetitem4->setText(QCoreApplication::translate("curr", "USD", nullptr));
+        QListWidgetItem *___qlistwidgetitem5 = listWidget_2->item(1);
+        ___qlistwidgetitem5->setText(QCoreApplication::translate("curr", "PLN", nullptr));
+        QListWidgetItem *___qlistwidgetitem6 = listWidget_2->item(2);
+        ___qlistwidgetitem6->setText(QCoreApplication::translate("curr", "UAH", nullptr));
+        QListWidgetItem *___qlistwidgetitem7 = listWidget_2->item(3);
+        ___qlistwidgetitem7->setText(QCoreApplication::translate("curr", "EUR", nullptr));
+        listWidget_2->setSortingEnabled(__sortingEnabled1);
+
     } // retranslateUi
 
 };

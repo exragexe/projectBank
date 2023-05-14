@@ -8,9 +8,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowTitle("DYAD Bank");
-    //setStyleSheet("background-color: white;");
-
-
     ui->label_3->setStyleSheet("background-color: transparent;");
     //.............
     QLabel labellg;
@@ -33,13 +30,19 @@ MainWindow::MainWindow(QWidget *parent)
     }
 
     query = new QSqlQuery(db);
-    QString createTable = "CREATE TABLE IF NOT EXISTS Users(IDCARD TEXT, Login TEXT, Password TEXT, Money INT, CreditStatus BOOL, SumCredit INT, Moneybox INT, HistorySender TEXT, HistoryPrice INT);";
+    QString createTable = "CREATE TABLE IF NOT EXISTS Users(IDCARD TEXT, Login TEXT, Password TEXT, Money DOUBLE, CreditStatus BOOL, SumCredit DOUBLE, Moneybox DOUBLE, HistorySender TEXT, HistoryPrice DOUBLE,TypeBills TEXT, Term INT, BlockCard BOOL, isAdmin BOOL, LastUpdated TEXT);";
 
     if (query->exec(createTable)) {
         qDebug() << "Table created";
     } else {
         qDebug() << "Table NOT created: " << query->lastError().text();
     }
+    //if (query->exec("ALTER TABLE Users ADD COLUMN LastUpdated TEXT")) {
+    //    qDebug() << "Column TypeBills added";
+    //} else {
+    //    qDebug() << "Column TypeBills NOT added: " << query->lastError().text();
+    //}
+
 
 
 }
@@ -60,17 +63,27 @@ void MainWindow::on_pushButton_2_clicked()
         query.prepare("SELECT * FROM Users WHERE Login = :login AND Password = :pass");
         query.bindValue(":login", login);
         query.bindValue(":pass", pass);
+        //qDebug()<<query.value("CreditStatus").toBool();
 
         if (query.exec() && query.next() && !login.isEmpty() && !pass.isEmpty()) {
-            globalLogin = query.value(1).toString();
-            globalPassword = query.value(2).toString();
-            hide();
+            if(query.value("isAdmin").toBool()){
+                hide();
+                admin = new adminpanel(this);
+                admin->setFixedSize(1100, 700);
+                admin->show();
+                db.close();
+            }
+            else{
+                globalLogin = query.value(1).toString();
+                globalPassword = query.value(2).toString();
+                hide();
 
-            window = new sign(this);
-            window->setFixedSize(700, 800);
-            window->show();
+                window = new sign(this);
+                window->setFixedSize(700, 800);
+                window->show();
 
-            db.close();
+                db.close();
+            }
         } else{
             QMessageBox* msgBox = new QMessageBox(this);
             msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");

@@ -122,7 +122,7 @@ public:
         label_3->setText(QString());
         label_4->setText(QString());
         pushButton->setText(QString());
-        label_5->setText(QString());
+        label_5->setText(QCoreApplication::translate("balance", "<html><head/><body><p align=\"center\"><br/></p></body></html>", nullptr));
         label_6->setText(QString());
         label_7->setText(QString());
         label_8->setText(QString());

@@ -21,6 +21,10 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_sel_clicked();
+
+    void on_buy_clicked();
+
 private:
     Ui::curr *ui;
     QDialog *sign;

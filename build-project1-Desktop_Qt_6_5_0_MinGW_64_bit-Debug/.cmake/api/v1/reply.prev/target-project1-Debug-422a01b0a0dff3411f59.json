@@ -51,7 +51,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 52,
+				"line" : 56,
 				"parent" : 0
 			},
 			{
@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 86,
+				"line" : 90,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 74,
+				"line" : 78,
 				"parent" : 0
 			},
 			{
@@ -386,18 +386,19 @@
 				23,
 				26,
 				29,
-				44
+				33,
+				49
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "project1_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "project1_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "project1_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "project1::@6890427a1f51a3e7e1df",
@@ -524,7 +525,8 @@
 				23,
 				26,
 				29,
-				44
+				33,
+				49
 			]
 		},
 		{
@@ -541,16 +543,19 @@
 				24,
 				27,
 				30,
-				33,
+				32,
 				34,
-				35,
-				36,
 				37,
 				38,
 				39,
 				40,
 				41,
-				42
+				42,
+				43,
+				44,
+				45,
+				46,
+				47
 			]
 		},
 		{
@@ -567,16 +572,17 @@
 				25,
 				28,
 				31,
-				32,
-				43
+				35,
+				36,
+				48
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				45,
-				46
+				50,
+				51
 			]
 		}
 	],
@@ -757,6 +763,27 @@
 		},
 		{
 			"backtrace" : 4,
+			"path" : "library.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "adminpanel.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "adminpanel.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "adminpanel.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
 			"path" : "resources.qrc",
 			"sourceGroupIndex" : 2
 		},
@@ -818,6 +845,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autogen/include/ui_sec.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autogen/include/ui_adminpanel.h",
 			"sourceGroupIndex" : 1
 		},
 		{

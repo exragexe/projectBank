@@ -338,6 +338,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/qt/projects/project1/adminpanel.h",
+			"MU",
+			"EWIEGA46WW/moc_adminpanel.cpp",
+			null
+		],
+		[
 			"D:/qt/projects/project1/balance.h",
 			"MU",
 			"EWIEGA46WW/moc_balance.cpp",
@@ -470,6 +476,7 @@
 	"SETTINGS_FILE" : "D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/CMakeFiles/project1_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "D:/qt/projects/project1/adminpanel.cpp", "MU", null ],
 		[ "D:/qt/projects/project1/balance.cpp", "MU", null ],
 		[ "D:/qt/projects/project1/bills.cpp", "MU", null ],
 		[ "D:/qt/projects/project1/credit.cpp", "MU", null ],

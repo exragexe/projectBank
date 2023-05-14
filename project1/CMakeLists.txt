@@ -45,6 +45,9 @@ set(PROJECT_SOURCES
         sec.h
         sec.ui
         library.h
+        adminpanel.cpp
+        adminpanel.h
+        adminpanel.ui
 
         resources.qrc
 )

@@ -11,11 +11,8 @@ sec::sec(QDialog *sign,QWidget *parent) :
 
 {
     ui->setupUi(this);
-    //globalLogin = login;
     setWindowTitle("DYAD Bank");
     setStyleSheet("background-color: transparent;");
-    //DATABASE
-
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     db.setDatabaseName("data.db");
     if (db.open()) {

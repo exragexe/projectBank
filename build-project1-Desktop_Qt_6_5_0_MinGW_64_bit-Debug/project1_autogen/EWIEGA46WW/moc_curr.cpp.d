@@ -6,6 +6,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/QString \
   D:/qt/6.5.0/mingw_64/include/QtCore/QStringList \
   D:/qt/6.5.0/mingw_64/include/QtCore/QStringListModel \
+  D:/qt/6.5.0/mingw_64/include/QtCore/QTimer \
   D:/qt/6.5.0/mingw_64/include/QtCore/q20memory.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/q20type_traits.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qabstractitemmodel.h \
@@ -18,6 +19,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/qatomic.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qatomic_cxx11.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qbasicatomic.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qbasictimer.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qbindingstorage.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qbytearray.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
@@ -111,6 +113,7 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qtenvironmentvariables.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qtextstream.h \
+  D:/qt/6.5.0/mingw_64/include/QtCore/qtimer.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qtmetamacros.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qtnoop.h \
   D:/qt/6.5.0/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -170,13 +173,16 @@ D:/qt/projects/build-project1-Desktop_Qt_6_5_0_MinGW_64_bit-Debug/project1_autog
   D:/qt/6.5.0/mingw_64/include/QtSql/QSqlError \
   D:/qt/6.5.0/mingw_64/include/QtSql/QSqlQuery \
   D:/qt/6.5.0/mingw_64/include/QtSql/QSqlQueryModel \
+  D:/qt/6.5.0/mingw_64/include/QtSql/QSqlTableModel \
   D:/qt/6.5.0/mingw_64/include/QtSql/qsqldatabase.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qsqlerror.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qsqlquery.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qsqlquerymodel.h \
+  D:/qt/6.5.0/mingw_64/include/QtSql/qsqltablemodel.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qtsql-config.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qtsqlexports.h \
   D:/qt/6.5.0/mingw_64/include/QtSql/qtsqlglobal.h \
+  D:/qt/6.5.0/mingw_64/include/QtWidgets/QAbstractItemView \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QApplication \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QDialog \
   D:/qt/6.5.0/mingw_64/include/QtWidgets/QFormLayout \

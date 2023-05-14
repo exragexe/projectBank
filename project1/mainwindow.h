@@ -6,6 +6,7 @@
 #include "sign.h"
 #include "library.h"
 #include "sec.h"
+#include "adminpanel.h"
 
 
 
@@ -34,6 +35,7 @@ private:
     QSqlDatabase db;
     QSqlQuery *query;
     sec *secw;
+    adminpanel *admin;
 
 };
 #endif // MAINWINDOW_H

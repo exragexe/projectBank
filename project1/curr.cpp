@@ -36,3 +36,15 @@ void curr::on_pushButton_4_clicked()
 
 }
 
+
+void curr::on_sel_clicked()//SEL
+{
+
+}
+
+
+void curr::on_buy_clicked()//BUY
+{
+
+}
+

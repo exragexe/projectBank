@@ -26,5 +26,9 @@
 #include <QStringList>
 #include <QStringListModel>
 #include <QStandardItemModel>
+#include <QTimer>
+#include <QDateTime>
+#include <QSqlTableModel>
+#include <QAbstractItemView>
 
 #endif // LIBRARY_H

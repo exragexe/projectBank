@@ -128,7 +128,7 @@ public:
         label->setText(QString());
         pushButton_2->setText(QString());
         pushButton->setText(QString());
-        label_8->setText(QString());
+        label_8->setText(QCoreApplication::translate("credit", "<html><head/><body><p align=\"center\"><br/></p></body></html>", nullptr));
 
         const bool __sortingEnabled = listWidget->isSortingEnabled();
         listWidget->setSortingEnabled(false);
