@@ -58,19 +58,14 @@ void registration::on_pushButton_clicked()
 
     }
     else{
-
         QSqlQuery query(db);
         QString id="";
         QString iddb;
-
         query.exec("SELECT IDCARD FROM Users");
         while (query.next()) {
             iddb = query.value(0).toString();
 
         }
-
-
-
         while(true){
             if (id.isEmpty() || id==iddb || id.size()<16) {
                 const int idLength = 16;
@@ -84,10 +79,8 @@ void registration::on_pushButton_clicked()
                 break;
             }
         }
-
-
-        query.prepare("INSERT INTO Users(IDCARD, Login, Password, Money, CreditStatus, SumCredit, Moneybox, HistorySender, HistoryPrice,TypeBills , Term,BlockCard, isAdmin) "
-                          "VALUES (:id, :login, :pass, 0, 0, 0 , 0,  NULL,0,NULL,0,false,false)");
+        query.prepare("INSERT INTO Users(IDCARD, Login, Password, Money, CreditStatus, SumCredit, Moneybox, HistorySender, HistoryPrice,TypeBills , Term,BlockCard, isAdmin,LastUpdated,EUR,PLN,UAH) "
+                          "VALUES (:id, :login, :pass, 0, 0, 0 , 0,  NULL,0,NULL,0,false,false,NULL,0,0,0)");
         query.bindValue(":id", id);
         query.bindValue(":login", login);
         query.bindValue(":pass", pass);

@@ -26,11 +26,11 @@ public:
     QLabel *label_3;
     QLabel *label_4;
     QPushButton *pushButton;
-    QLabel *label_5;
     QListView *listView;
     QLabel *label_6;
     QLabel *label_7;
     QLabel *label_8;
+    QListView *listView_2;
 
     void setupUi(QDialog *balance)
     {
@@ -57,16 +57,12 @@ public:
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(580, 10, 101, 91));
         pushButton->setStyleSheet(QString::fromUtf8("border-image: url(:/resources/img/Group 10.png);"));
-        label_5 = new QLabel(balance);
-        label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(310, 520, 221, 61));
-        QFont font;
-        font.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
-        font.setPointSize(22);
-        label_5->setFont(font);
         listView = new QListView(balance);
         listView->setObjectName("listView");
         listView->setGeometry(QRect(290, 630, 256, 221));
+        QFont font;
+        font.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
+        font.setPointSize(22);
         listView->setFont(font);
         listView->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
         listView->setFrameShadow(QFrame::Raised);
@@ -98,16 +94,25 @@ public:
         font3.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
         font3.setPointSize(20);
         label_8->setFont(font3);
+        listView_2 = new QListView(balance);
+        listView_2->setObjectName("listView_2");
+        listView_2->setGeometry(QRect(310, 520, 221, 61));
+        QFont font4;
+        font4.setFamilies({QString::fromUtf8("Bahnschrift SemiLight Condensed")});
+        font4.setPointSize(41);
+        listView_2->setFont(font4);
+        listView_2->setStyleSheet(QString::fromUtf8("background-color: rgb(166, 166, 166);"));
+        listView_2->setFrameShadow(QFrame::Raised);
         label_8->raise();
         label->raise();
         label_2->raise();
         label_3->raise();
         label_4->raise();
         pushButton->raise();
-        label_5->raise();
         label_6->raise();
         label_7->raise();
         listView->raise();
+        listView_2->raise();
 
         retranslateUi(balance);
 
@@ -122,7 +127,6 @@ public:
         label_3->setText(QString());
         label_4->setText(QString());
         pushButton->setText(QString());
-        label_5->setText(QCoreApplication::translate("balance", "<html><head/><body><p align=\"center\"><br/></p></body></html>", nullptr));
         label_6->setText(QString());
         label_7->setText(QString());
         label_8->setText(QString());

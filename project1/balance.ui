@@ -93,25 +93,6 @@
     <string/>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>520</y>
-     <width>221</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Bahnschrift SemiLight Condensed</family>
-     <pointsize>22</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-   </property>
-  </widget>
   <widget class="QListView" name="listView">
    <property name="geometry">
     <rect>
@@ -210,16 +191,38 @@
     <string/>
    </property>
   </widget>
+  <widget class="QListView" name="listView_2">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>520</y>
+     <width>221</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Bahnschrift SemiLight Condensed</family>
+     <pointsize>41</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(166, 166, 166);</string>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
   <zorder>label_8</zorder>
   <zorder>label</zorder>
   <zorder>label_2</zorder>
   <zorder>label_3</zorder>
   <zorder>label_4</zorder>
   <zorder>pushButton</zorder>
-  <zorder>label_5</zorder>
   <zorder>label_6</zorder>
   <zorder>label_7</zorder>
   <zorder>listView</zorder>
+  <zorder>listView_2</zorder>
  </widget>
  <resources>
   <include location="resources.qrc"/>

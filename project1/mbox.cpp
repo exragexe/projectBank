@@ -87,7 +87,7 @@ void mbox::on_pushButton_3_clicked()
                 ui->card->text().clear();
                 QMessageBox* msgBox = new QMessageBox(this);
                 msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-                msgBox->setText("Deposit confirm!");
+                msgBox->setText("Deposit confirmed!");
                 msgBox->setWindowTitle("Moneybox");
                 msgBox->setIcon(QMessageBox::Information);
 
@@ -100,7 +100,7 @@ void mbox::on_pushButton_3_clicked()
             else{
                 QMessageBox* msgBox = new QMessageBox(this);
                 msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-                msgBox->setText("Error: Deposit not confirm!");
+                msgBox->setText("Error: Deposit not confirmed!");
                 msgBox->setWindowTitle("Moneybox");
                 msgBox->setIcon(QMessageBox::Critical);
 
@@ -117,7 +117,7 @@ void mbox::on_pushButton_3_clicked()
         else{
             QMessageBox* msgBox = new QMessageBox(this);
             msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-            msgBox->setText("Error: Deposit not confirm!");
+            msgBox->setText("Error: Deposit not confirmed!");
             msgBox->setWindowTitle("Moneybox");
             msgBox->setIcon(QMessageBox::Critical);
 
@@ -163,7 +163,7 @@ void mbox::on_pushButton_2_clicked()
                 ui->card->text().clear();
                 QMessageBox* msgBox = new QMessageBox(this);
                 msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-                msgBox->setText("Deposit confirm!");
+                msgBox->setText("Deposit confirmed!");
                 msgBox->setWindowTitle("Moneybox");
                 msgBox->setIcon(QMessageBox::Information);
 
@@ -176,7 +176,7 @@ void mbox::on_pushButton_2_clicked()
             else{
                 QMessageBox* msgBox = new QMessageBox(this);
                 msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-                msgBox->setText("Error: Deposit not confirm!");
+                msgBox->setText("Error: Deposit not confirmed!");
                 msgBox->setWindowTitle("Moneybox");
                 msgBox->setIcon(QMessageBox::Critical);
 
@@ -193,7 +193,7 @@ void mbox::on_pushButton_2_clicked()
         else{
             QMessageBox* msgBox = new QMessageBox(this);
             msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-            msgBox->setText("Error: Deposit not confirm!");
+            msgBox->setText("Error: Deposit not confirmed!");
             msgBox->setWindowTitle("Moneybox");
             msgBox->setIcon(QMessageBox::Critical);
 
@@ -208,22 +208,3 @@ void mbox::on_pushButton_2_clicked()
 
     }
 }
-//void mbox::updateBalance()
-//{
-//    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-//    db.setDatabaseName("data.db");
-//    if (!db.open()) {
-//        qDebug() << "Error opening database: " << db.lastError();
-//    } else {
-//        QSqlQuery query(db);
-//        query.prepare("SELECT * FROM Users WHERE Login =:login");
-//        query.bindValue(":login",globalLogin);
-//        if(query.exec()  && query.first()){
-//            double percent = query.value("Moneybox").toDouble() * 0.01;
-//            double newBalance = query.value("Moneybox").toDouble() + percent;
-//            ui->label_3->setText(//);
-//        }
-//    }
-//
-//}
-//

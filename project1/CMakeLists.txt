@@ -53,6 +53,7 @@ set(PROJECT_SOURCES
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
+    find_package(Qt6 COMPONENTS Network REQUIRED)
     qt_add_executable(project1
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
@@ -76,6 +77,7 @@ else()
 endif()
 find_package(Qt6 COMPONENTS Sql REQUIRED)
 target_link_libraries(project1 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt6::Sql)
+target_link_libraries(project1 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Network)
 
 
 

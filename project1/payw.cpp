@@ -1,5 +1,5 @@
 #include "payw.h"
-#include "qsqlerror.h"
+#include <QSqlError>
 #include "registration.h"
 #include "ui_payw.h"
 
@@ -67,11 +67,14 @@ void payw::on_pushButton_2_clicked()
         QSqlQuery query(db);
         query.prepare("SELECT * FROM Users WHERE IDCARD = :idcard");
         query.bindValue(":idcard", idcard);
+
         if ( ui->listWidget->currentItem() && query.exec() && query.first() &&querybank.exec() && querybank.first() &&  (sum.toInt()> 0)&& sum.toInt() < query.value("Money").toInt() && !payee.isEmpty() && !sum.isEmpty() && payee != query.value("IDCARD").toString() ) {
+
             QString currentHiss = query.value("HistorySender").toString();
             QString currentHisp = query.value("HistoryPrice").toString();
             QString newHiss = currentHiss.isEmpty() ? payee : currentHiss + "," + payee;
             QString newHisp = currentHisp.isEmpty() ? "-"+sum : currentHisp + "," + "-"+sum;
+
 
             money = query.value("Money").toInt();
             QSqlQuery updateQuery(db);
@@ -107,7 +110,7 @@ void payw::on_pushButton_2_clicked()
                 else{
                     QMessageBox* msgBox = new QMessageBox(this);
                     msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-                    msgBox->setText("Error: Payment not confirm!");
+                    msgBox->setText("Error: Payment not confirmed!");
                     msgBox->setWindowTitle("Payment");
                     msgBox->setIcon(QMessageBox::Critical);
                     QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
@@ -117,26 +120,30 @@ void payw::on_pushButton_2_clicked()
                 }
                 qDebug() << sum.toInt();
                 qDebug() << querysend.value(payee);
-                //updateQuery.first()
-                if (updateQuery.exec() && querysend.exec()&& updateQuerysend.exec() ){
 
+
+                if (updateQuery.exec() && querysend.exec()&& updateQuerysend.exec() ){
+                    db.commit();
+                    qDebug ()<<query.value("HistorySender").toString();
+                    qDebug ()<<query.value("HistoryPrice").toString();
                     ui->payee->clear();
                     ui->sum->clear();
+
                     QMessageBox* msgBox = new QMessageBox(this);
                     msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-                    msgBox->setText("Payment confirm!");
+                    msgBox->setText("Payment confirmed!");
                     msgBox->setWindowTitle("Payment");
                     msgBox->setIcon(QMessageBox::Information);
                     QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
                     okButton->setFixedSize(80,30);
                     okButton->setStyleSheet("QPushButton { border: 1px solid #1E90FF; }");
                     QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
-                    db.commit();
+
                  }
                  else {
                     QMessageBox* msgBox = new QMessageBox(this);
                     msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-                    msgBox->setText("Error: Payment not confirm!");
+                    msgBox->setText("Error: Payment not confirmed!");
                     msgBox->setWindowTitle("Payment");
                     msgBox->setIcon(QMessageBox::Critical);
                     QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
@@ -149,7 +156,7 @@ void payw::on_pushButton_2_clicked()
             else{
                 QMessageBox* msgBox = new QMessageBox(this);
                 msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-                msgBox->setText("Error: Payment not confirm!");
+                msgBox->setText("Error: Payment not confirmed!");
                 msgBox->setWindowTitle("Payment");
                 msgBox->setIcon(QMessageBox::Critical);
                 QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);
@@ -162,7 +169,7 @@ void payw::on_pushButton_2_clicked()
         else{
             QMessageBox* msgBox = new QMessageBox(this);
             msgBox->setStyleSheet("QMessageBox { background-color: #FFFFFF; color: #000000; }");
-            msgBox->setText("Error: Payment not confirm!");
+            msgBox->setText("Error: Payment not confirmed!");
             msgBox->setWindowTitle("Payment");
             msgBox->setIcon(QMessageBox::Critical);
              QAbstractButton* okButton = msgBox->addButton(QMessageBox::Ok);

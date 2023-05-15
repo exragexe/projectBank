@@ -30,5 +30,10 @@
 #include <QDateTime>
 #include <QSqlTableModel>
 #include <QAbstractItemView>
+#include <QtNetwork/QNetworkRequest>
+#include <QJsonDocument>
+#include <QtNetwork/QNetworkAccessManager>
+#include <QtNetwork/QNetworkReply>
+#include <QtSql>
 
 #endif // LIBRARY_H

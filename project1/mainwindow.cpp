@@ -30,18 +30,14 @@ MainWindow::MainWindow(QWidget *parent)
     }
 
     query = new QSqlQuery(db);
-    QString createTable = "CREATE TABLE IF NOT EXISTS Users(IDCARD TEXT, Login TEXT, Password TEXT, Money DOUBLE, CreditStatus BOOL, SumCredit DOUBLE, Moneybox DOUBLE, HistorySender TEXT, HistoryPrice DOUBLE,TypeBills TEXT, Term INT, BlockCard BOOL, isAdmin BOOL, LastUpdated TEXT);";
+    QString createTable = "CREATE TABLE IF NOT EXISTS Users(IDCARD TEXT, Login TEXT, Password TEXT, Money DOUBLE, CreditStatus BOOL, SumCredit DOUBLE, Moneybox DOUBLE, HistorySender TEXT, HistoryPrice DOUBLE,TypeBills TEXT, Term INT, BlockCard BOOL, isAdmin BOOL, LastUpdated TEXT,EUR DOUBLE,PLN DOUBLE,UAH DOUBLE);";
 
     if (query->exec(createTable)) {
         qDebug() << "Table created";
     } else {
         qDebug() << "Table NOT created: " << query->lastError().text();
     }
-    //if (query->exec("ALTER TABLE Users ADD COLUMN LastUpdated TEXT")) {
-    //    qDebug() << "Column TypeBills added";
-    //} else {
-    //    qDebug() << "Column TypeBills NOT added: " << query->lastError().text();
-    //}
+
 
 
 
