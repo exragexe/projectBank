@@ -74,8 +74,6 @@ void payw::on_pushButton_2_clicked()
             QString currentHisp = query.value("HistoryPrice").toString();
             QString newHiss = currentHiss.isEmpty() ? payee : currentHiss + "," + payee;
             QString newHisp = currentHisp.isEmpty() ? "-"+sum : currentHisp + "," + "-"+sum;
-
-
             money = query.value("Money").toInt();
             QSqlQuery updateQuery(db);
             updateQuery.prepare("UPDATE Users SET HistorySender = :hiss, SumCredit = :credsum,HistoryPrice = :hisp, Money = :money WHERE IDCARD = :idcard AND CreditStatus = :credstat");
@@ -95,6 +93,7 @@ void payw::on_pushButton_2_clicked()
                 QSqlQuery updateQuerysend(db);
                 updateQuerysend.prepare("UPDATE Users SET HistorySender = :hiss, HistoryPrice = :hisp, Money = :money WHERE IDCARD = :idcardsend");
                 updateQuerysend.bindValue(":idcardsend", payee);
+
 
                 if(payee==querybank.value("IDCARD").toString() && query.value("SumCredit").toInt()>= sum.toInt()){
                     qDebug()<<query.value("SumCredit").toInt();
@@ -119,10 +118,11 @@ void payw::on_pushButton_2_clicked()
                     QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
                 }
                 qDebug() << sum.toInt();
-                qDebug() << querysend.value(payee);
+
 
 
                 if (updateQuery.exec() && querysend.exec()&& updateQuerysend.exec() ){
+
                     db.commit();
                     qDebug ()<<query.value("HistorySender").toString();
                     qDebug ()<<query.value("HistoryPrice").toString();
