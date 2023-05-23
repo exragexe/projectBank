@@ -79,8 +79,8 @@ void registration::on_pushButton_clicked()
                 break;
             }
         }
-        query.prepare("INSERT INTO Users(IDCARD, Login, Password, Money, CreditStatus, SumCredit, Moneybox, HistorySender, HistoryPrice,TypeBills , Term,BlockCard, isAdmin,LastUpdated,EUR,PLN,UAH) "
-                          "VALUES (:id, :login, :pass, 0, 0, 0 , 0,  NULL,0,NULL,0,false,false,NULL,0,0,0)");
+        query.prepare("INSERT INTO Users(IDCARD, Login, Password, Money, Moneybox, BlockCard, isAdmin,EUR,PLN,UAH) "
+                          "VALUES (:id, :login, :pass, 0,  0,false,false,0,0,0)");
         query.bindValue(":id", id);
         query.bindValue(":login", login);
         query.bindValue(":pass", pass);

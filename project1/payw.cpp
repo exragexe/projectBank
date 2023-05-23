@@ -85,7 +85,7 @@ void payw::on_pushButton_2_clicked()
             QSqlQuery querysend(db);
             querysend.prepare("SELECT * FROM Users WHERE IDCARD = :idcardsend");
             querysend.bindValue(":idcardsend", payee);
-            if (querysend.exec() && querysend.first() ) {
+            if (querysend.exec() && querysend.first()) {
                 QString currentHissforsend = querysend.value("HistorySender").toString();
                 QString currentHispforsend = querysend.value("HistoryPrice").toString();
                 QString newHissforsend = currentHissforsend.isEmpty() ? payee : currentHissforsend + "," + idcard;
@@ -118,12 +118,10 @@ void payw::on_pushButton_2_clicked()
                     QMetaObject::invokeMethod(msgBox, "exec", Qt::QueuedConnection);
                 }
                 qDebug() << sum.toInt();
-
-
-
                 if (updateQuery.exec() && querysend.exec()&& updateQuerysend.exec() ){
 
                     db.commit();
+
                     qDebug ()<<query.value("HistorySender").toString();
                     qDebug ()<<query.value("HistoryPrice").toString();
                     ui->payee->clear();

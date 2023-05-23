@@ -10,7 +10,7 @@ balance::balance(QDialog *sign,QWidget *parent) :
     sign(sign)
 {
     ui->setupUi(this);
-    qint64 money;
+
     setWindowTitle("DYAD Bank");
     setStyleSheet("background-color: transparent;");
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
@@ -26,6 +26,9 @@ balance::balance(QDialog *sign,QWidget *parent) :
         query.bindValue(":login", globalLogin);
 
         if (query.exec() && query.first()) {
+            qDebug ()<< query.value("HistoryPrice").toString();
+
+             qDebug ()<<query.value("HistorySender").toString();
             ui->label_7->setText(query.value("IDCARD").toString());
             //========BALANCE
             QString moneyUSD = query.value("Money").toString();
@@ -96,4 +99,5 @@ void balance::on_pushButton_clicked()
     sign->show();
 
 }
+
 

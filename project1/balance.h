@@ -26,6 +26,7 @@ private:
     QDialog *sign;
     QSqlDatabase db;
     QSqlQuery *query;
+    qint64 money;
 
 };
 

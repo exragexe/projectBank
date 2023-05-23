@@ -34,6 +34,7 @@ adminpanel::adminpanel(QWidget *parent) :
         model->setHeaderData(11, Qt::Horizontal, "BlockCard");
 
         ui->tableView->setModel(model);
+        ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
 
     }
 }

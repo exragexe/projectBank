@@ -82,7 +82,7 @@ bills::bills(QDialog *sign,QWidget *parent) :
                     else{
                         itemsum->setText(sumlist[i]);
                     }
-                    if(statuslist[i] == "true" ){//|| !sumlist[i].isEmpty()
+                    if(statuslist[i] == "true" ){
                         itemstatus->setText("Active");
                         qDebug()<< statuslist[i];
                         qDebug()<< sumlist[i];
